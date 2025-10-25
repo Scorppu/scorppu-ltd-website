@@ -83,7 +83,7 @@ export default function RootLayout({
               </div>
               <div className="mt-16 pt-8 border-t border-gray-700">
                 <p className="text-sm text-gray-300">
-                  © {new Date().getFullYear()} Scorppu Ltd. All rights reserved.
+                  {`© ${new Date().getFullYear()} Scorppu Ltd. All rights reserved.`}
                 </p>
               </div>
             </div>
@@ -95,3 +95,4 @@ export default function RootLayout({
 }
 
 
+  
