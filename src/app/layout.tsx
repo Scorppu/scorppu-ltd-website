@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,9 +18,6 @@ export const metadata: Metadata = {
   title: "Scorppu Ltd",
   description: "Scorppu Ltd Website",
 };
-
-// app/layout.js
-import Link from "next/link";
 
 export default function RootLayout({
   children,
@@ -46,13 +44,13 @@ export default function RootLayout({
           </div>
 
           {/* Main content */}
-          <main className="flex-grow pt-[81px] mt-8">
+          <main className="flex-grow pt-[80px] mt-8 min-h-[calc(100vh-60px)]">
             {children}
           </main>
 
           {/* Footer */}
-          <footer className="w-full bg-gray-900 text-white py-16 mt-8">
-            <div className="max-w-7xl mx-auto px-8">
+          <footer className="w-full bg-stone-800 text-white py-16 mt-8">
+            <div className="mx-auto px-8">
               <div className="grid grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold mb-4">ABOUT</h3>
@@ -81,8 +79,8 @@ export default function RootLayout({
                   </ul>
                 </div>
               </div>
-              <div className="mt-16 pt-8 border-t border-gray-700">
-                <p className="text-sm text-gray-300">
+              <div className="mt-16 pt-8 border-t border-stone-700">
+                <p className="text-sm text-stone-300">
                   {`© ${new Date().getFullYear()} Scorppu Ltd. All rights reserved.`}
                 </p>
               </div>
