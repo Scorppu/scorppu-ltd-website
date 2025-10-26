@@ -43,7 +43,7 @@ export default function Ares() {
             </div>
           </div>
           <p className="text-lg italic mb-2">Journalist</p>
-          <p>Shes' a girl</p>
+          <p>{"She's a girl"}</p>
           <p>Brief bio or description paragraph 2.</p>
           <p>Brief bio or description paragraph 3.</p>
         </div>
