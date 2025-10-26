@@ -44,13 +44,13 @@ export default function RootLayout({
           </div>
 
           {/* Main content */}
-          <main className="flex-grow pt-[81px] mt-8">
+          <main className="flex-grow pt-[80px] mt-8 min-h-[calc(100vh-60px)]">
             {children}
           </main>
 
           {/* Footer */}
           <footer className="w-full bg-stone-800 text-white py-16 mt-8">
-            <div className="max-w-7xl mx-auto px-8">
+            <div className="mx-auto px-8">
               <div className="grid grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold mb-4">ABOUT</h3>
