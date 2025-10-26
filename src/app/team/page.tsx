@@ -1,11 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
-
-type TeamMemberProps = {
-  name: string;
-  imageURL: string;
-  url: string;
-};
+import TeamMember from "@/components/team/TeamMember";
+import SubTeam from "@/components/team/SubTeam";
 
 const softwareEngineers = [
   {
@@ -49,43 +43,6 @@ const journalists = [
   },
 ];
 
-export function TeamMember({ name, imageURL, url }: TeamMemberProps) {
-  return (
-    <Link href={url} passHref className="flex flex-col items-center px-8 flex-grow hover:underline">
-      <div className="w-40 h-40 rounded-full overflow-hidden">
-        <Image
-          src={imageURL}
-          alt="team member thumbnail"
-          width={100}
-          height={100}
-          style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
-          priority
-        />d
-      </div>
-      <h2 className="text-2xl mt-4">{name}</h2>
-    </Link>
-  );
-}
-
-export function SubTeam({ title, members }: { title: string; members: TeamMemberProps[] }) {
-  return (
-    <div className="mb-10 flex flex-col items-center">
-      <h2 className="text-2xl font-bold mb-6"> {title} </h2>
-      <div className="flex flex-row space-x-8">
-        {members.map((member) => (
-          <TeamMember
-            key={member.name} // Use a unique key, e.g., member id or name
-            name={member.name}
-            imageURL={member.imageURL}
-            url={member.url}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-
 export default function Team() {
   return (
     <div className="flex flex-col items-center px-8 flex-grow">
@@ -101,7 +58,7 @@ export default function Team() {
       </div>
       <SubTeam title="Software Engineers" members={softwareEngineers} />
       <SubTeam title="Civil Engineers" members={civilEngineers} />
-      <SubTeam title="Doctors" members={doctors} />
+      <SubTeam title="Doctors (NO PAGES YET)" members={doctors} />
       <SubTeam title="Journalists" members={journalists} />
     </div>
   );
