@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,9 +18,6 @@ export const metadata: Metadata = {
   title: "Scorppu Ltd",
   description: "Scorppu Ltd Website",
 };
-
-// app/layout.js
-import Link from "next/link";
 
 export default function RootLayout({
   children,
