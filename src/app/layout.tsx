@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import Link from "next/link";
+import NavBar from "@/components/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,14 +31,7 @@ export default function RootLayout({
         <div className="min-h-screen bg-white text-black flex flex-col">
           {/* Fixed top nav and partition wrapper */}
           <div className="fixed w-full top-0 left-0 z-20 bg-white">
-            <nav className="w-full h-20 flex items-center justify-between px-8">
-              <Link href="/" className="text-3xl font-serif">SCORPPU LTD</Link>
-              <div className="flex gap-8 items-center font-semibold text-base">
-                <Link href="/gallery" className="hover:opacity-75">GALLERY</Link>
-                <Link href="/about" className="hover:opacity-75">ABOUT</Link>
-                <Link href="/contact" className="hover:opacity-75">CONTACT</Link>
-              </div>
-            </nav>
+            <NavBar/>
             <div className="flex px-8">
               <div className="w-full h-[1px] bg-black" />
             </div>

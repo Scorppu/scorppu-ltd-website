@@ -9,7 +9,7 @@ export default function Prince() {
         <h1 className="text-6xl font-bold mb-7">Princebw30</h1>
       </div>
 
-      <div className="flex flex-row items-center px-20 mb-8">
+      <div className="flex flex-col md:flex-row items-center px-20 mb-8">
         <div className="w-40 h-40 rounded-full overflow-hidden mr-8">
           <Image
             src="/profilePics/prince.jpg"
@@ -22,7 +22,7 @@ export default function Prince() {
         </div>
 
         <div className="flex flex-col">
-          <div className="flex flex-row items-center">
+          <div className="flex flex-col md:flex-row items-center">
             <h2 className="text-4xl mb-1 mr-4">Brian Wong</h2>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
