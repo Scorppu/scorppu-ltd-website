@@ -1,25 +1,59 @@
-import Image from "next/image";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Link from "next/link";
+import GallerySection from "@/components/GallerySection";
 
-export default function About() {
+export default function Home() {
   return (
-    <main className="flex flex-col items-center px-5 flex-grow">
-      {/* 74px = 64px (h-16 nav) + 10px (partition+spacing); Adjust as needed */}
-      {/* Large Centered Title */}
-      <h1 className="text-9xl font-serif tracking-tight mb-8 text-center">
-        SCORPPU LTD
-      </h1>
+    <>
+      <Header />
+      <Hero />
 
-      {/* Rounded Hero Image (replace src with your own image) */}
-      <div className="w-9/10 max-w-8xl rounded-[60px] overflow-hidden shadow-md bg-white">
-        <Image
-          src="/scorppultd.png" // Update with your hero image
-          alt="scorppultd thumbnail"
-          width={1200}
-          height={700}
-          style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
-          priority
-        />
-      </div>
-    </main>
+      {/* Regular content below hero */}
+      <main className="flex flex-col flex-grow pt-20 px-8 pb-16 items-center bg-white">
+        <h2 className="text-4xl text-black">{"We build, you watch (or don't)"}</h2>
+        <div className="flex-row w-full">
+          <GallerySection />
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="w-full bg-stone-800 text-white py-16">
+        <div className="mx-auto px-8">
+          <div className="grid grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">ABOUT</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/about" className="hover:opacity-75">
+                    Our Story
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/team" className="hover:opacity-75">
+                    Team
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">CONTACT</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/contact" className="hover:opacity-75">
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-16 pt-8 border-t border-stone-700">
+            <p className="text-sm text-stone-300">
+              {`© ${new Date().getFullYear()} Scorppu Ltd. All rights reserved.`}
+            </p>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
