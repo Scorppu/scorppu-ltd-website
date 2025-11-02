@@ -10,13 +10,13 @@ export default function Scorppu() {
       </div>
 
       <div className="flex flex-col md:flex-row items-center px-20 mb-8">
-        <div className="w-40 h-40 rounded-full overflow-hidden md:mr-8">
+        <div className="w-40 h-40 min-w-[160px] rounded-full overflow-hidden md:mr-8">
           <Image
             src="/profilePics/scorppu.jpg"
             alt="team member thumbnail"
-            width={100}
-            height={100}
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            width={160}
+            height={160}
+            className="w-full h-full object-cover"
             priority
           />
         </div>

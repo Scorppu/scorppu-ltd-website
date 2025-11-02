@@ -10,7 +10,7 @@ export default function SubTeam({ title, members }: { title: string; members: Te
   return (
     <div className="mb-10 flex flex-col items-center">
       <h2 className="text-2xl font-bold mb-6"> {title} </h2>
-      <div className="flex flex-col md:flex-row space-x-8">
+      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
         {members.map((member) => (
           <TeamMember
             key={member.name} // Use a unique key, e.g., member id or name
