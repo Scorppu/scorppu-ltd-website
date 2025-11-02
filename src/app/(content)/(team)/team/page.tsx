@@ -5,12 +5,12 @@ const softwareEngineers = [
   {
     name: "Brian (Prince) Wong",
     imageURL: "/profilePics/prince.jpg",
-    url: "/team/princebw30",
+    url: "/princebw30",
   },
   {
     name: "Dawn (Edgeman) Chan",
     imageURL: "/profilePics/edgeman.jpg",
-    url: "/team/edgeman475",
+    url: "/edgeman475",
   },
 ];
 
@@ -18,12 +18,12 @@ const doctors = [
   {
     name: "Kevin (Chua) Chua",
     imageURL: "/profilePics/chua.jpg",
-    url: "/team/chua",
+    url: "/chua",
   },
   {
     name: "Reyes (Ball) Lee",
     imageURL: "/profilePics/ball.jpg",
-    url: "/team/ball",
+    url: "/ball",
   },
 ];
 
@@ -31,7 +31,7 @@ const civilEngineers = [
   {
     name: "Eddie (Korbi) Wong",
     imageURL: "/profilePics/korbi.jpg",
-    url: "/team/korbi",
+    url: "/korbi",
   },
 ];
 
@@ -39,7 +39,7 @@ const journalists = [
   {
     name: "Cindy (AresHunter) Lee",
     imageURL: "/profilePics/ares.jpg",
-    url: "/team/areshunterqy",
+    url: "/areshunterqy",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function Team() {
         <TeamMember
           name="Eugene (Scorppu) Chan"
           imageURL="/profilePics/scorppu.jpg"
-          url="/team/scorppu"
+          url="/scorppu"
         />
       </div>
       <SubTeam title="Software Engineers" members={softwareEngineers} />
