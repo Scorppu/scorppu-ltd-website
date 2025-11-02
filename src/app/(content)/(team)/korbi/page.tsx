@@ -9,21 +9,21 @@ export default function Korbi() {
         <h1 className="text-6xl font-bold mb-7">Korbi</h1>
       </div>
 
-      <div className="flex flex-row items-center px-20 mb-8">
-        <div className="w-40 h-40 rounded-full overflow-hidden mr-8">
+      <div className="flex flex-col md:flex-row items-center px-20 mb-8">
+        <div className="w-40 h-40 min-w-[160px] rounded-full overflow-hidden md:mr-8">
           <Image
             src="/profilePics/korbi.jpg"
             alt="profile thumbnail"
-            width={100}
-            height={100}
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            width={160}
+            height={160}
+            className="w-full h-full object-cover"
             priority
           />
         </div>
 
         <div className="flex flex-col">
-          <div className="flex flex-row items-center">
-            <h2 className="text-4xl mb-1 mr-4">Eddie Wong</h2>
+          <div className="flex flex-col md:flex-row items-center">
+            <h2 className="text-4xl mb-1 md:mr-4">Eddie Wong</h2>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin size={22} />
