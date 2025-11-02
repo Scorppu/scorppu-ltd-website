@@ -26,6 +26,8 @@ export default function NavBar() {
         <Link href="/contact" className="hover:opacity-75">CONTACT</Link>
       </div>
 
+
+
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="absolute top-20 left-0 w-full bg-white border-t md:hidden">
@@ -34,6 +36,8 @@ export default function NavBar() {
             <Link href="/about" className="hover:opacity-75">ABOUT</Link>
             <Link href="/contact" className="hover:opacity-75">CONTACT</Link>
           </div>
+          <div className="w-full h-[1px] bg-black" />
+
         </div>
       )}
     </nav>
