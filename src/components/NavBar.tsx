@@ -21,7 +21,7 @@ export default function NavBar() {
 
       {/* Desktop menu */}
       <div className="hidden md:flex gap-8 items-center font-semibold text-base">
-        <Link href="/gallery" className="hover:opacity-75">GALLERY</Link>
+        {/* <Link href="/gallery" className="hover:opacity-75">GALLERY</Link> */}
         <Link href="/about" className="hover:opacity-75">ABOUT</Link>
         <Link href="/contact" className="hover:opacity-75">CONTACT</Link>
       </div>
@@ -32,11 +32,10 @@ export default function NavBar() {
       {isMenuOpen && (
         <div className="absolute top-20 left-0 w-full bg-white border-t md:hidden">
           <div className="flex flex-col gap-4 p-4">
-            <Link href="/gallery" className="hover:opacity-75">GALLERY</Link>
+            {/* <Link href="/gallery" className="hover:opacity-75">GALLERY</Link> */}
             <Link href="/about" className="hover:opacity-75">ABOUT</Link>
             <Link href="/contact" className="hover:opacity-75">CONTACT</Link>
           </div>
-          <div className="w-full h-[1px] bg-black" />
 
         </div>
       )}

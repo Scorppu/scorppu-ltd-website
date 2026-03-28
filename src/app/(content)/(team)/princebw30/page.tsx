@@ -4,7 +4,7 @@ import { FaTwitter, FaYoutube, FaLinkedin, FaGithub, FaInstagram } from "react-i
 
 export default function Prince() {
   return (
-    <div>
+    <div className="pt-10">
       <div className="flex flex-col items-center px-8 flex-grow">
         <h1 className="text-6xl font-bold mb-7">Princebw30</h1>
       </div>
@@ -61,19 +61,19 @@ export default function Prince() {
           startDate={"Start Date"}
           endDate={"End Date"}
           role={"Role / Position"}
-          description={"Description of responsibilities and achievements."}
+          description={["Description of responsibilities and achievements."]}
         />
         <WorkExperience
           startDate={"Start Date"}
           endDate={"End Date"}
           role={"Role / Position"}
-          description={"Description of responsibilities and achievements."}
+          description={["Description of responsibilities and achievements."]}
         />
         <WorkExperience
           startDate={"Start Date"}
           endDate={"End Date"}
           role={"Role / Position"}
-          description={"Description of responsibilities and achievements."}
+          description={["Description of responsibilities and achievements."]}
         />
       </div>
     </div>

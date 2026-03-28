@@ -4,19 +4,21 @@ type TeamMemberProps = {
   name: string;
   imageURL: string;
   url: string;
+  role?: string;
 };
 
 export default function SubTeam({ title, members }: { title: string; members: TeamMemberProps[] }) {
   return (
-    <div className="mb-10 flex flex-col items-center">
-      <h2 className="text-2xl font-bold mb-6"> {title} </h2>
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+    <div className="mb-14">
+      <h2 className="text-xs font-semibold tracking-widest text-stone-400 uppercase mb-6">{title}</h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {members.map((member) => (
           <TeamMember
-            key={member.name} // Use a unique key, e.g., member id or name
+            key={member.name}
             name={member.name}
             imageURL={member.imageURL}
             url={member.url}
+            role={member.role}
           />
         ))}
       </div>

@@ -2,17 +2,17 @@ import Image from "next/image";
 import WorkExperience from "@/components/team/WorkExperience";
 import { FaTwitter, FaYoutube, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
-export default function Ares() {
+export default function CindyLee() {
   return (
-    <div>
+    <div className="pt-10">
       <div className="flex flex-col items-center px-8 flex-grow">
-        <h1 className="text-6xl font-bold mb-7">AresHunterQY</h1>
+        <h1 className="text-6xl font-bold mb-7">Cindy Lee</h1>
       </div>
 
       <div className="flex flex-col md:flex-row items-center px-20 mb-8">
         <div className="w-40 h-40 min-w-[160px] rounded-full overflow-hidden md:mr-8">
           <Image
-            src="/profilePics/ares.jpg"
+            src="/profilePics/cindy.jpg"
             alt="profile thumbnail"
             width={160}
             height={160}
@@ -61,19 +61,19 @@ export default function Ares() {
           startDate={"Start Date"}
           endDate={"End Date"}
           role={"Role / Position"}
-          description={"Description of responsibilities and achievements."}
+          description={["Description of responsibilities and achievements."]}
         />
         <WorkExperience
           startDate={"Start Date"}
           endDate={"End Date"}
           role={"Role / Position"}
-          description={"Description of responsibilities and achievements."}
+          description={["Description of responsibilities and achievements."]}
         />
         <WorkExperience
           startDate={"Start Date"}
           endDate={"End Date"}
           role={"Role / Position"}
-          description={"Description of responsibilities and achievements."}
+          description={["Description of responsibilities and achievements."]}
         />
       </div>
     </div>

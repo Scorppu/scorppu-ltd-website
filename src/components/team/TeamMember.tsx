@@ -5,22 +5,24 @@ type TeamMemberProps = {
   name: string;
   imageURL: string;
   url: string;
+  role?: string;
 };
 
-export default function TeamMember({ name, imageURL, url }: TeamMemberProps) {
+export default function TeamMember({ name, imageURL, url, role }: TeamMemberProps) {
   return (
-    <Link href={url} passHref className="flex flex-col items-center px-8 flex-grow hover:underline">
-      <div className="w-40 h-40 rounded-full overflow-hidden">
+    <Link href={url} className="flex flex-col items-center group">
+      <div className="w-full aspect-square overflow-hidden rounded-lg mb-3">
         <Image
           src={imageURL}
-          alt="team member thumbnail"
-          width={100}
-          height={100}
-          style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+          alt={name}
+          width={300}
+          height={300}
+          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
           priority
         />
       </div>
-      <h2 className="text-2xl mt-4">{name}</h2>
+      <h2 className="text-base font-semibold text-black text-center">{name}</h2>
+      {role && <p className="text-sm text-stone-500 text-center">{role}</p>}
     </Link>
   );
 }

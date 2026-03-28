@@ -61,7 +61,7 @@ export default function GallerySection() {
   return (
     <>
       {/* Gallery Grid */}
-      <section className="w-full py-20 px-8">
+      <section className="w-full py-20 px-4 md:px-8">
         <div className="w-full mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {galleryItems.map((item) => (
@@ -84,11 +84,11 @@ export default function GallerySection() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <Link href="/gallery" className="px-8 py-3 border-2 border-black text-black hover:bg-black hover:text-white transition-colors duration-300">
               VIEW MORE
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
