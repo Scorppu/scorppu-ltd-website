@@ -13,11 +13,11 @@ import Link from "next/link";
 export default function Scorppu() {
   return (
     <div className="pt-10 pb-10">
-      <div className="flex flex-col items-center px-8 flex-grow">
+      <div className="flex flex-col items-center px-6 md:px-8 flex-grow">
         <h1 className="text-6xl font-bold mb-7">Scorppu</h1>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center px-20 mb-8">
+      <div className="flex flex-col md:flex-row items-center px-6 md:px-20 mb-8">
         <div className="w-40 h-40 min-w-[160px] rounded-full overflow-hidden md:mr-8">
           <Image
             src="/profilePics/scorppu.jpg"
@@ -84,11 +84,11 @@ export default function Scorppu() {
         </div>
       </div>
 
-      <div className="flex px-20 mb-8">
+      <div className="flex px-6 md:px-20 mb-8">
         <div className="w-full h-[1px] bg-stone-200" />
       </div>
 
-      <div className="flex flex-col items-left px-20">
+      <div className="flex flex-col items-left px-6 md:px-20">
         <h2 className="text-2xl font-medium">{"Working Experience:"}</h2>
         <WorkExperience
           startDate={"Sep 2025"}
@@ -119,11 +119,11 @@ export default function Scorppu() {
         />
       </div>
 
-      <div className="flex px-20 mb-8">
+      <div className="flex px-6 md:px-20 mb-8">
         <div className="w-full h-[1px] bg-stone-200" />
       </div>
 
-      <div className="flex flex-col items-left px-20">
+      <div className="flex flex-col items-left px-6 md:px-20">
         <h2 className="text-2xl font-medium mb-6">{"Projects"}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {[
@@ -177,11 +177,11 @@ export default function Scorppu() {
         </div>
       </div>
 
-      <div className="flex px-20 mb-8">
+      <div className="flex px-6 md:px-20 mb-8">
         <div className="w-full h-[1px] bg-stone-200" />
       </div>
 
-      <div className="flex flex-col items-center px-20">
+      <div className="flex flex-col items-center px-6 md:px-20">
         <h2 className="text-2xl font-medium mb-6 self-start">
           {"Interests And Hobbies"}
         </h2>
@@ -217,7 +217,7 @@ export default function Scorppu() {
         </div>
       </div>
 
-      <div className="flex px-20 mb-8">
+      <div className="flex px-6 md:px-20 mb-8">
         <div className="w-full h-[1px] bg-stone-200" />
       </div>
 
