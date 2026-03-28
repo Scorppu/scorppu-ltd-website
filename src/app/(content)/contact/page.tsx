@@ -33,10 +33,10 @@ export default function Contact() {
           </div>
 
           {/* Socials */}
-          <div className="border border-stone-200 p-6">
+          {/* <div className="border border-stone-200 p-6">
             <h2 className="text-xs font-semibold tracking-widest text-stone-400 mb-2">SOCIALS</h2>
             <p className="text-stone-500 text-sm">More links coming soon.</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

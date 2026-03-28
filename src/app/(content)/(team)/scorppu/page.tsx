@@ -129,28 +129,38 @@ export default function Scorppu() {
           {[
             {
               name: "GPU Accelerated FX/FXCH (ongoing)",
-              description: "Optimized the FXCH module in ABC (UC Berkeley's sequential synthesis & verification system) by parallelizing subcube comparisons using CUDA, achieving significant performance gains on medium-to-large logic designs.",
+              description:
+                "Optimized the FXCH module in ABC (UC Berkeley's sequential synthesis & verification system) by parallelizing subcube comparisons using CUDA, achieving significant performance gains on medium-to-large logic designs.",
               githubURL: null,
             },
             {
               name: "BlackEye Valkyrie System (2025)",
-              description: "Architected a lightweight web-based Clinical Management System for hospital management in remote areas, built with Spring Boot, MongoDB, Java, and JavaScript.",
-              githubURL: "https://github.com/Scorppu/BlackEyeValkyrieSystem_ScorppuLtd",
+              description:
+                "Architected a lightweight web-based Clinical Management System for hospital management in remote areas, built with Spring Boot, MongoDB, Java, and JavaScript.",
+              githubURL:
+                "https://github.com/Scorppu/BlackEyeValkyrieSystem_ScorppuLtd",
             },
             {
               name: "Motion Controlled Laser Turret (2024)",
-              description: "Engineered a gyroscope-operated laser turret on the Tiva C Launchpad with wireless controller-turret communication over Bluetooth via UART, programmed entirely in C.",
-              githubURL: "https://github.com/Scorppu/Motion_Controlled_Laser_Turret",
+              description:
+                "Engineered a gyroscope-operated laser turret on the Tiva C Launchpad with wireless controller-turret communication over Bluetooth via UART, programmed entirely in C.",
+              githubURL:
+                "https://github.com/Scorppu/Motion_Controlled_Laser_Turret",
             },
             {
               name: "Scorppu LTD Website",
               description: "This website!",
-              githubURL: "https://github.com/Scorppu/scorppu-ltd-website"
-            }
+              githubURL: "https://github.com/Scorppu/scorppu-ltd-website",
+            },
           ].map(({ name, description, githubURL }) => (
-            <div key={name} className="bg-stone-50 rounded-lg border border-stone-200 p-6 flex flex-col">
+            <div
+              key={name}
+              className="bg-stone-50 rounded-lg border border-stone-200 p-6 flex flex-col"
+            >
               <h3 className="text-lg font-semibold mb-2">{name}</h3>
-              <p className="text-sm text-stone-500 leading-relaxed flex-grow">{description}</p>
+              <p className="text-sm text-stone-500 leading-relaxed flex-grow">
+                {description}
+              </p>
               {githubURL && (
                 <a
                   href={githubURL}
@@ -172,22 +182,22 @@ export default function Scorppu() {
       </div>
 
       <div className="flex flex-col items-center px-20">
-        <h2 className="text-2xl font-medium mb-6 self-start">{"Interests And Hobbies"}</h2>
+        <h2 className="text-2xl font-medium mb-6 self-start">
+          {"Interests And Hobbies"}
+        </h2>
 
         <div className="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden mb-6 w-full max-w-3xl">
           <div className="px-6 pt-6 pb-4">
             <h3 className="text-lg font-semibold mb-1">Counter-Strike</h3>
             <p className="text-sm text-stone-500">
-              Competing and grinding ranked matches — one of the games that sharpened my strategic thinking and reaction time.
+              Competing and grinding ranked matches — one of the games that
+              sharpened my strategic thinking and reaction time.
             </p>
           </div>
           <div className="px-6 pb-6">
-            <YouTubeEmbed
-              videoid="pxiPG_ZMFuY"
-              width={720}
-              height={405}
-              params="controls=1&start=0"
-            />
+            <div className="w-full">
+              <YouTubeEmbed videoid="pxiPG_ZMFuY" params="controls=1&start=0" />
+            </div>
           </div>
         </div>
 
@@ -195,16 +205,14 @@ export default function Scorppu() {
           <div className="px-6 pt-6 pb-4">
             <h3 className="text-lg font-semibold mb-1">Minecraft</h3>
             <p className="text-sm text-stone-500">
-              Building ambitious structures and running a private server with friends — creativity without limits.
+              Building ambitious structures and running a private server with
+              friends — creativity without limits.
             </p>
           </div>
           <div className="px-6 pb-6">
-            <YouTubeEmbed
-              videoid="c8gX7ucFitk"
-              width={720}
-              height={405}
-              params="controls=1&start=0"
-            />
+            <div className="w-full">
+              <YouTubeEmbed videoid="c8gX7ucFitk" params="controls=1&start=0" />
+            </div>
           </div>
         </div>
       </div>
