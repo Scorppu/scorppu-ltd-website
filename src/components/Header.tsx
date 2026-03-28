@@ -64,6 +64,9 @@ export default function Header() {
           {/* <Link href="/gallery" className="hover:opacity-75">
             {"GALLERY"}
           </Link> */}
+          <Link href="/team" className="hover:opacity-75">
+            {"TEAM"}
+          </Link>
           <Link href="/about" className="hover:opacity-75">
             {"ABOUT"}
           </Link>
@@ -82,13 +85,22 @@ export default function Header() {
         }`}
       >
         <div className="flex flex-col gap-4 p-4">
-          <Link href="/gallery" className="hover:opacity-75 font-medium text-black">
+          <Link
+            href="/gallery"
+            className="hover:opacity-75 font-medium text-black"
+          >
             GALLERY
           </Link>
-          <Link href="/about" className="hover:opacity-75 font-medium text-black">
+          <Link
+            href="/about"
+            className="hover:opacity-75 font-medium text-black"
+          >
             ABOUT
           </Link>
-          <Link href="/contact" className="hover:opacity-75 font-medium text-black">
+          <Link
+            href="/contact"
+            className="hover:opacity-75 font-medium text-black"
+          >
             CONTACT
           </Link>
         </div>

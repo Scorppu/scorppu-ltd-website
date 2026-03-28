@@ -43,33 +43,55 @@ const members = [
   // {
   //   name: "Kevin (Chua) Chua",
   //   imageURL: "/profilePics/chua.jpg",
-  //   url: "/chua",
+  //   // url: "/chua",
   // },
   // {
   //   name: "Reyes (Ball) Lee",
   //   imageURL: "/profilePics/ball.jpg",
-  //   url: "/ball",
+  //   // url: "/ball",
   // },
-  {
-    name: "Cindy Lee",
-    imageURL: "/profilePics/cindy.jpg",
-    url: "/cindylee",
-    role: "Journalist",
-    description: "Passionate writer",
-  },
+  // {
+  //   name: "Cindy Lee",
+  //   imageURL: "/profilePics/cindy.jpg",
+  //   url: "/cindylee",
+  //   role: "Journalist",
+  //   description: "Passionate writer",
+  // },
 ];
 
 export default function Team() {
   return (
-    <div className="px-4 md:px-8 py-12 bg-stone-50">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="flex justify-center text-4xl md:text-5xl font-semibold mb-12">
-          Meet the team
-        </h1>
-        <div className="flex flex-wrap justify-center gap-6">
-          {members.map((member) => (
-            <TeamMemberCard key={member.url} {...member} />
-          ))}
+    <div className="min-h-screen bg-stone-50 flex flex-col">
+      {/* Hero banner */}
+      <div className="w-full bg-stone-900 text-white py-20 px-4 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-semibold tracking-wide mb-4">
+            Meet the Team
+          </h1>
+          <p className="text-stone-300 text-lg md:text-xl font-light">
+            The people behind Scorppu Ltd
+          </p>
+        </div>
+      </div>
+
+      {/* Intro blurb */}
+      <div className="py-10 px-4 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-stone-600 leading-relaxed">
+            A small group of builders, engineers, and creators who share a passion
+            for making things — from software to Minecraft structures.
+          </p>
+        </div>
+      </div>
+
+      {/* Cards */}
+      <div className="px-4 md:px-8 pb-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-6">
+            {members.map((member) => (
+              <TeamMemberCard key={member.imageURL} {...member} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
