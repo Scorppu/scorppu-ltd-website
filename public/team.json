@@ -82,19 +82,29 @@
       "cvFilename": "ChanEugeneCV"
     },
     {
-      "slug": "princebw30",
-      "handle": "Princebw30",
+      "slug": "prince",
+      "handle": "Prince",
       "name": "Brian Wong",
       "role": "Software Engineer",
       "shortBio": "Graphics Engineering Expert",
       "bio": "",
       "imageURL": "/profilePics/prince.jpg",
       "socials": {
-        "github": "https://github.com/Princebw225"
+        "github": "https://github.com/Princebw225",
+        "instagram": "https://www.instagram.com/prince_bw225"
       },
       "workExperience": [],
       "projects": [],
-      "hobbies": [],
+      "hobbies": [
+        {
+          "name": "Escape from Tarkov",
+          "description": "Spending 40 minutes in my stash, 10 minutes in queue, and get head-eyes'd 2 minutes into a raid. Repeated for 4000 hours."
+        },
+        {
+          "name": "Counter-Strike",
+          "description": "Whiffing entire mags and baiting friends. Never give me the a4."
+        }
+      ],
       "cvURL": null,
       "cvFilename": null
     },
