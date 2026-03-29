@@ -131,23 +131,6 @@
       "hobbies": [],
       "cvURL": null,
       "cvFilename": null
-    },
-    {
-      "slug": "cindylee",
-      "handle": "Cindy Lee",
-      "name": "Cindy Lee",
-      "role": "Journalist",
-      "shortBio": "Passionate writer",
-      "bio": "",
-      "imageURL": "/profilePics/cindy.jpg",
-      "socials": {
-        "youtube": "https://www.youtube.com/@angelhuntress7111"
-      },
-      "workExperience": [],
-      "projects": [],
-      "hobbies": [],
-      "cvURL": null,
-      "cvFilename": null
     }
   ]
 }
