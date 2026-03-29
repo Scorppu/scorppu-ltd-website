@@ -23,6 +23,7 @@ interface GitHubCommit {
 
 interface GitHubEventPayload {
   action?: string;
+  ref?: string;
   ref_type?: string;
   commits?: GitHubCommit[];
 }
@@ -41,6 +42,7 @@ interface ParsedEvent {
   label: string;
   repoName: string;
   repoUrl: string;
+  branch?: string; // 👈 add this
   commitMsg?: string;
   timeAgo: string;
 }
@@ -75,10 +77,12 @@ function parseEvent(event: GitHubEvent): ParsedEvent | null {
     case "PushEvent": {
       const commits = event.payload.commits ?? [];
       const commitMsg = commits.at(-1)?.message.split("\n")[0];
+      const branch = event.payload.ref?.replace("refs/heads/", "");
       return {
         ...base,
         icon: <FaArrowUp size={ICON_SIZE} />,
         label: `Pushed to ${repoName}`,
+        branch,
         commitMsg,
       };
     }
@@ -157,9 +161,14 @@ function EventCard({ event }: { event: ParsedEvent }) {
       <div className="flex flex-col gap-0.5 min-w-0">
         <p className="text-sm text-stone-700 font-medium truncate">
           {event.label}
+          {event.branch && (
+            <span className="text-stone-400 font-normal">
+              {" "}
+              / {event.branch}
+            </span>
+          )}
         </p>
         {event.commitMsg && (
-          // ✅
           <p className="text-xs text-stone-400 italic truncate">
             {`"${event.commitMsg}"`}
           </p>
@@ -169,7 +178,6 @@ function EventCard({ event }: { event: ParsedEvent }) {
     </a>
   );
 }
-
 function SkeletonCard() {
   return (
     <div className="bg-stone-50 rounded-lg border border-stone-200 p-4 flex items-start gap-3 animate-pulse">
