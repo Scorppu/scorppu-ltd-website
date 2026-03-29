@@ -64,7 +64,12 @@ const ICON_SIZE = 14;
 function parseEvent(event: GitHubEvent): ParsedEvent | null {
   const repoName = event.repo.name.split("/")[1];
   const repoUrl = `https://github.com/${event.repo.name}`;
-  const base = { id: event.id, repoName, repoUrl, timeAgo: formatTimeAgo(event.created_at) };
+  const base = {
+    id: event.id,
+    repoName,
+    repoUrl,
+    timeAgo: formatTimeAgo(event.created_at),
+  };
 
   switch (event.type) {
     case "PushEvent": {
@@ -150,9 +155,14 @@ function EventCard({ event }: { event: ParsedEvent }) {
         {event.icon}
       </span>
       <div className="flex flex-col gap-0.5 min-w-0">
-        <p className="text-sm text-stone-700 font-medium truncate">{event.label}</p>
+        <p className="text-sm text-stone-700 font-medium truncate">
+          {event.label}
+        </p>
         {event.commitMsg && (
-          <p className="text-xs text-stone-400 italic truncate">"{event.commitMsg}"</p>
+          // ✅
+          <p className="text-xs text-stone-400 italic truncate">
+            {`"${event.commitMsg}"`}
+          </p>
         )}
         <p className="text-xs text-stone-400">{event.timeAgo}</p>
       </div>
@@ -184,7 +194,9 @@ export default function ProfileGitHubActivity({
   maxEvents = 10,
 }: ProfileGitHubActivityProps) {
   const [events, setEvents] = useState<ParsedEvent[]>([]);
-  const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
+  const [status, setStatus] = useState<"loading" | "success" | "error">(
+    "loading",
+  );
 
   useEffect(() => {
     const controller = new AbortController();
@@ -196,7 +208,7 @@ export default function ProfileGitHubActivity({
           {
             headers: { Accept: "application/vnd.github+json" },
             signal: controller.signal,
-          }
+          },
         );
 
         if (!res.ok) throw new Error(`GitHub API returned ${res.status}`);
