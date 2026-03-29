@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Scorppu Ltd",
-  description: "Scorppu Ltd Website",
+  description: "where dreams become reality",
 };
 
 export default function RootLayout({

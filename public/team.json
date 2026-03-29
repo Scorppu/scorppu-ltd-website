@@ -1,0 +1,136 @@
+{
+  "members": [
+    {
+      "slug": "scorppu",
+      "handle": "Scorppu",
+      "name": "Eugene Chan",
+      "role": "Founder & CEO",
+      "shortBio": "Computer Engineer with hands-on experience in full-stack development, systems programming, and GPU acceleration.",
+      "bio": "Final-year Computer Engineering student at CUHK and part-time Software Engineer at Efinix, building cross-platform apps with Python and Flutter. Passionate about systems programming, GPU acceleration, and — when away from the keyboard — lifting weights and gaming on Minecraft and CS.",
+      "imageURL": "/profilePics/scorppu.jpg",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/eugenechan111/",
+        "github": "https://github.com/Scorppu",
+        "youtube": "https://youtube.com/@scorppu",
+        "twitter": "https://twitter.com/scorppu",
+        "instagram": "https://instagram.com/eugenechan0_o"
+      },
+      "workExperience": [
+        {
+          "startDate": "Sep 2025",
+          "endDate": "Present",
+          "role": "Part-time Software Engineer at Efinix, Inc.",
+          "description": [
+            "Continued cross-platform app development in Python and Flutter alongside core engineering team",
+            "Collaborated closely with fellow engineers to design, review, and iterate on features, gaining exposure to production-level engineering practices and code standards"
+          ]
+        },
+        {
+          "startDate": "Jun 2025",
+          "endDate": "Aug 2025",
+          "role": "Software Engineer Intern at Efinix, Inc.",
+          "description": [
+            "Developed cross-platform Windows/Linux desktop applications using Python and Flutter",
+            "Independently designed and shipped major features that significantly improved end-user experience and workflow efficiency"
+          ]
+        },
+        {
+          "startDate": "May 2024",
+          "endDate": "Jun 2024",
+          "role": "Programming Intern at Media Explorer Limited",
+          "description": [
+            "Aided in updating e-Commerce solution using JSP and HTML",
+            "Developed new features for clubhouse management system using SpringBoot"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "GPU Accelerated FX/FXCH (ongoing)",
+          "description": "Optimized the FXCH module in ABC (UC Berkeley's sequential synthesis & verification system) by parallelizing subcube comparisons using CUDA, achieving significant performance gains on medium-to-large logic designs.",
+          "githubURL": null
+        },
+        {
+          "name": "BlackEye Valkyrie System (2025)",
+          "description": "Architected a lightweight web-based Clinical Management System for hospital management in remote areas, built with Spring Boot, MongoDB, Java, and JavaScript.",
+          "githubURL": "https://github.com/Scorppu/BlackEyeValkyrieSystem_ScorppuLtd"
+        },
+        {
+          "name": "Motion Controlled Laser Turret (2024)",
+          "description": "Engineered a gyroscope-operated laser turret on the Tiva C Launchpad with wireless controller-turret communication over Bluetooth via UART, programmed entirely in C.",
+          "githubURL": "https://github.com/Scorppu/Motion_Controlled_Laser_Turret"
+        },
+        {
+          "name": "Scorppu LTD Website",
+          "description": "This website!",
+          "githubURL": "https://github.com/Scorppu/scorppu-ltd-website"
+        }
+      ],
+      "hobbies": [
+        {
+          "name": "Counter-Strike",
+          "description": "Competing and grinding ranked matches — one of the games that sharpened my strategic thinking and reaction time.",
+          "youtubeVideoId": "pxiPG_ZMFuY"
+        },
+        {
+          "name": "Minecraft",
+          "description": "Building ambitious structures and running a private server with friends — creativity without limits.",
+          "youtubeVideoId": "c8gX7ucFitk"
+        }
+      ],
+      "cvURL": "/cvs/ChanEugeneCV.pdf",
+      "cvFilename": "ChanEugeneCV"
+    },
+    {
+      "slug": "princebw30",
+      "handle": "Princebw30",
+      "name": "Brian Wong",
+      "role": "Software Engineer",
+      "shortBio": "Graphics Engineering Expert",
+      "bio": "",
+      "imageURL": "/profilePics/prince.jpg",
+      "socials": {
+        "github": "https://github.com/Princebw225"
+      },
+      "workExperience": [],
+      "projects": [],
+      "hobbies": [],
+      "cvURL": null,
+      "cvFilename": null
+    },
+    {
+      "slug": "edgeman475",
+      "handle": "Edgeman475",
+      "name": "Dawn Chan",
+      "role": "Software Engineer",
+      "shortBio": "Computer Engineer with strong background in both software and hardware applications",
+      "bio": "",
+      "imageURL": "/profilePics/edgeman.jpg",
+      "socials": {
+        "github": "https://github.com/din-dawn"
+      },
+      "workExperience": [],
+      "projects": [],
+      "hobbies": [],
+      "cvURL": null,
+      "cvFilename": null
+    },
+    {
+      "slug": "korbi",
+      "handle": "Korbi",
+      "name": "Eddie Wong",
+      "role": "Civil Engineer",
+      "shortBio": "",
+      "bio": "",
+      "imageURL": "/profilePics/korbi.jpg",
+      "socials": {
+        "github": "https://github.com/korbiwong"
+      },
+      "workExperience": [],
+      "projects": [],
+      "hobbies": [],
+      "cvURL": null,
+      "cvFilename": null
+    }
+  ]
+}
