@@ -7,7 +7,7 @@ import ProfileHobbies from "@/components/team/profile/ProfileHobbies";
 import ProfileDivider from "@/components/team/profile/ProfileDivider";
 
 export default function Prince() {
-  const member = teamData.members.find((m) => m.slug === "princebw30") as TeamMember;
+  const member = teamData.members.find((m) => m.slug === "prince") as TeamMember;
 
   return (
     <div className="pt-10 pb-10">
