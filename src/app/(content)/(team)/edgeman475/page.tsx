@@ -7,6 +7,8 @@ import ProfileHobbies from '@/components/team/profile/ProfileHobbies';
 import ProfileDivider from '@/components/team/profile/ProfileDivider';
 import { notFound } from 'next/navigation';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Edgeman() {
   const { env } = await getCloudflareContext({ async: true });
   const member = await getMember(env.DB, 'edgeman475');

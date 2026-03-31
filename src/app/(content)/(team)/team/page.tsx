@@ -2,6 +2,8 @@ import { getCloudflareContext } from '@opennextjs/cloudflare';
 import { getAllMembers } from '@/lib/db';
 import TeamMemberCard from '@/components/team/TeamMemberCard';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Team() {
   const { env } = await getCloudflareContext({ async: true });
   const members = await getAllMembers(env.DB);

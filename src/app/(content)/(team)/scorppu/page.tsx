@@ -8,6 +8,8 @@ import ProfileCVDownload from '@/components/team/profile/ProfileCVDownload';
 import ProfileDivider from '@/components/team/profile/ProfileDivider';
 import { notFound } from 'next/navigation';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Scorppu() {
   const { env } = await getCloudflareContext({ async: true });
   const member = await getMember(env.DB, 'scorppu');
