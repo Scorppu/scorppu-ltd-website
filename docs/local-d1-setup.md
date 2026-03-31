@@ -10,11 +10,10 @@ You need to create and seed this local database once after cloning the repo.
 
 ## Prerequisites
 
-Install Wrangler globally and authenticate:
+Install Wrangler globally:
 
 ```bash
 npm install -g wrangler
-wrangler login
 ```
 
 ---
