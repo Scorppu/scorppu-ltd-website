@@ -1,0 +1,16 @@
+name = "scorppu-ltd-website"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+pages_build_output_dir = ".vercel/output/static"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "scorppu-prod"
+database_id = "0319d3f6-dda6-4f1d-a070-9bbf6b05deaf"
+
+[env.preview]
+[[env.preview.d1_databases]]
+binding = "DB"
+database_name = "scorppu-preview"
+database_id = "7ae6c71e-714d-4cb6-b2b0-861d7c67d23b"

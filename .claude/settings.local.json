@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(cat './src/app/\\(content\\)/\\(team\\)/team/page.tsx')",
+      "Bash(cat 'src/app/\\(content\\)/\\(team\\)/scorppu/page.tsx')"
+    ]
+  }
+}

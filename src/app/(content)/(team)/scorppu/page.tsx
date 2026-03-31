@@ -1,14 +1,17 @@
-import teamData from "@/../public/team.json";
-import type { TeamMember } from "@/types/team";
-import ProfileHero from "@/components/team/profile/ProfileHero";
-import ProfileWorkExperience from "@/components/team/profile/ProfileWorkExperience";
-import ProfileProjects from "@/components/team/profile/ProfileProjects";
-import ProfileHobbies from "@/components/team/profile/ProfileHobbies";
-import ProfileCVDownload from "@/components/team/profile/ProfileCVDownload";
-import ProfileDivider from "@/components/team/profile/ProfileDivider";
+import { getCloudflareContext } from '@opennextjs/cloudflare';
+import { getMember } from '@/lib/db';
+import ProfileHero from '@/components/team/profile/ProfileHero';
+import ProfileWorkExperience from '@/components/team/profile/ProfileWorkExperience';
+import ProfileProjects from '@/components/team/profile/ProfileProjects';
+import ProfileHobbies from '@/components/team/profile/ProfileHobbies';
+import ProfileCVDownload from '@/components/team/profile/ProfileCVDownload';
+import ProfileDivider from '@/components/team/profile/ProfileDivider';
+import { notFound } from 'next/navigation';
 
-export default function Scorppu() {
-  const member = teamData.members.find((m) => m.slug === "scorppu") as TeamMember;
+export default async function Scorppu() {
+  const { env } = await getCloudflareContext({ async: true });
+  const member = await getMember(env.DB, 'scorppu');
+  if (!member) notFound();
 
   return (
     <div className="pt-10 pb-10">

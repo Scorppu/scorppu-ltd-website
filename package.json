@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@next/third-parties": "^16.2.1",
+    "@opennextjs/cloudflare": "^1.18.0",
     "next": "^15.5.14",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260331.1",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",

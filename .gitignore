@@ -42,3 +42,8 @@ next-env.d.ts
 
 # claude
 CLAUDE.md
+# cloudflare local dev secrets
+.dev.vars
+
+# wrangler local state
+.wrangler/

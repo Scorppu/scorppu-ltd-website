@@ -1,9 +1,11 @@
-"use client";
+import { getCloudflareContext } from '@opennextjs/cloudflare';
+import { getAllMembers } from '@/lib/db';
+import TeamMemberCard from '@/components/team/TeamMemberCard';
 
-import teamData from "@/../public/team.json";
-import TeamMemberCard from "@/components/team/TeamMemberCard";
+export default async function Team() {
+  const { env } = await getCloudflareContext({ async: true });
+  const members = await getAllMembers(env.DB);
 
-export default function Team() {
   return (
     <div className="min-h-screen bg-stone-50 flex flex-col">
       {/* Hero banner */}
@@ -32,7 +34,7 @@ export default function Team() {
       <div className="px-4 md:px-8 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap justify-center gap-6">
-            {teamData.members.map((member) => (
+            {members.map((member) => (
               <TeamMemberCard
                 key={member.slug}
                 name={member.name}
