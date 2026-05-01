@@ -86,10 +86,10 @@ export default function Header() {
       >
         <div className="flex flex-col gap-4 p-4">
           <Link
-            href="/gallery"
+            href="/team"
             className="hover:opacity-75 font-medium text-black"
           >
-            GALLERY
+            TEAM
           </Link>
           <Link
             href="/about"
