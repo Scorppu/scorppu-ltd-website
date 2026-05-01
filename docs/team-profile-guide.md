@@ -19,6 +19,7 @@ Open `public/team.json` and find your entry in the `members` array (or add one i
 - **`shortBio`** — A punchy one-liner about yourself. Shows up in preview cards. Keep it under 15 words.
 - **`bio`** — A longer paragraph about you — your studies, current work, what you're into technically, maybe a hobby or two. Leave it as `""` if you're not ready yet.
 - **`imageURL`** — Path to your profile pic. Drop your photo in `/public/profilePics/` and set this to `"/profilePics/yourname.jpg"`.
+- **`bannerURL`** — Path to your banner pic. Drop your photo in `/public/bannerPics/` and set this to `"/bannerPics/yourname.jpg"`.
 - **`cvURL`** — Path to your CV PDF under `/public/cvs/`. Format: `"/cvs/YourNameCV.pdf"`. Set to `null` if you don't have one.
 - **`cvFilename`** — Just the filename without the extension (e.g. `"ChanEugeneCV"`). `null` if no CV.
 
