@@ -33,6 +33,7 @@ export type TeamMember = {
   shortBio: string;
   bio: string;
   imageURL: string;
+  bannerURL: string;
   socials: SocialLinks;
   workExperience: WorkExperienceEntry[];
   projects: Project[];

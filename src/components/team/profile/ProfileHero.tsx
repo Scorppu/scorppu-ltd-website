@@ -19,9 +19,15 @@ const socialIcons = [
 export default function ProfileHero({ member }: { member: TeamMember }) {
   return (
     <>
-      <div className="flex flex-col items-center px-6 md:px-8 flex-grow">
-        <h1 className="text-6xl font-bold mb-7">{member.handle}</h1>
-      </div>
+      {member.bannerURL ? (
+        <div className="flex flex-col items-center px-6 md:px-8 flex-grow mb-8">
+          <img src={member.bannerURL} alt="Banner" className="banner-image" />
+        </div>
+      ) : (
+        <div className="flex flex-col items-center px-6 md:px-8 flex-grow">
+          <h1 className="text-6xl font-bold mb-7">{member.handle}</h1>
+        </div>
+      )}
 
       <div className="flex flex-col md:flex-row items-center px-6 md:px-20 mb-8">
         <div className="w-40 h-40 min-w-[160px] rounded-full overflow-hidden md:mr-8">

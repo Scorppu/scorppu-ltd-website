@@ -7,7 +7,7 @@ export default function NavBar() {
 
   return (
     <nav className="w-full h-20 flex items-center justify-between px-4 md:px-8">
-      <Link href="/" className="text-2xl md:text-3xl font-serif">
+      <Link href="/" className="text-2xl md:text-3xl">
         SCORPPU LTD
       </Link>
 

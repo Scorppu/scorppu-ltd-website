@@ -30,7 +30,7 @@ export default function Header() {
             activeStyle ? "text-black" : "text-white"
           }`}
         >
-          <Link href="/" className="text-2xl md:text-3xl font-serif">
+          <Link href="/" className="text-2xl md:text-3xl">
             {"SCORPPU LTD"}
           </Link>
         </div>
