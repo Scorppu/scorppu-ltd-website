@@ -30,7 +30,7 @@ export default function Header() {
             activeStyle ? "text-black" : "text-white"
           }`}
         >
-          <Link href="/" className="text-2xl md:text-3xl font-serif">
+          <Link href="/" className="text-2xl md:text-3xl">
             {"SCORPPU LTD"}
           </Link>
         </div>
@@ -86,10 +86,10 @@ export default function Header() {
       >
         <div className="flex flex-col gap-4 p-4">
           <Link
-            href="/gallery"
+            href="/team"
             className="hover:opacity-75 font-medium text-black"
           >
-            GALLERY
+            TEAM
           </Link>
           <Link
             href="/about"
