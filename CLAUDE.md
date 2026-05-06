@@ -45,6 +45,7 @@ scorppu-ltd-website/
 │   │   ├── Hero.tsx
 │   │   ├── Footer.tsx
 │   │   ├── GallerySection.tsx
+│   │   ├── ThemeToggle.tsx             # Dark/light mode toggle (client component)
 │   │   └── team/                   # Team-specific components
 │   ├── data/                       # Static data (TypeScript objects)
 │   └── types/                      # Shared TypeScript type definitions
@@ -105,7 +106,27 @@ not via `create-cloudflare` or the Wrangler CLI scaffold. Respect this setup.
 
 ---
 
-## Development Commands
+## Dark Mode
+
+The site supports user-controlled dark mode via a toggle in the navigation.
+
+- **Mechanism**: Tailwind v4 class-based dark mode using `@custom-variant dark (&:where(.dark, .dark *))` in `globals.css`. The `dark` class is toggled on `<html>`.
+- **Persistence**: The user's preference is stored in `localStorage` under the key `'theme'` (`'dark'` or `'light'`).
+- **Anti-FOUC**: An inline `<script>` in `<head>` (in `src/app/layout.tsx`) reads `localStorage` and applies the `dark` class before first paint. Falls back to `prefers-color-scheme` if no preference is stored.
+- **Toggle component**: `src/components/ThemeToggle.tsx` — a `"use client"` component placed in both `Header` and `NavBar`.
+- **Palette**: Warm stone-family dark theme. Key mappings:
+  - Page backgrounds: `bg-white` → `dark:bg-stone-950`
+  - Elevated sections: `bg-stone-50` → `dark:bg-stone-900`
+  - Cards: `bg-white` → `dark:bg-stone-800`
+  - Primary text: `text-black` → `dark:text-stone-100`
+  - Muted text: `text-stone-600` / `text-gray-500` → `dark:text-stone-400`
+  - Borders: `border-stone-200` → `dark:border-stone-700`
+  - Nav separator: `shadow-md` in light → `border-b border-stone-800` in dark (avoids lighter-than-background shadow glow)
+- When adding new UI, always include `dark:` variants for any background, text, or border color classes.
+
+---
+
+
 
 ```bash
 npm run dev      # Start dev server with Turbopack

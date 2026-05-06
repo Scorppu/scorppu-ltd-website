@@ -3,7 +3,7 @@ export default function Contact() {
     <div className="py-16 px-4 md:px-8">
       <div className="max-w-lg mx-auto">
         <h1 className="text-4xl md:text-5xl font-semibold mb-2">Contact</h1>
-        <p className="text-stone-500 mb-12">
+        <p className="text-stone-500 dark:text-stone-400 mb-12">
           This is a personal project — reach out through any of the channels below.
         </p>
 
@@ -22,7 +22,7 @@ export default function Contact() {
           </div> */}
 
           {/* Email */}
-          <div className="border border-stone-200 p-6">
+          <div className="border border-stone-200 dark:border-stone-700 p-6">
             <h2 className="text-xs font-semibold tracking-widest text-stone-400 mb-2">EMAIL</h2>
             <a
               href="mailto:eugenechan111@gmail.com"

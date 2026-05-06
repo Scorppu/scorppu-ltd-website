@@ -5,7 +5,7 @@ import TeamMemberCard from "@/components/team/TeamMemberCard";
 
 export default function Team() {
   return (
-    <div className="min-h-screen bg-stone-50 flex flex-col">
+    <div className="min-h-screen bg-stone-50 dark:bg-stone-950 flex flex-col">
       {/* Hero banner */}
       <div className="w-full bg-stone-900 text-white py-20 px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
@@ -21,7 +21,7 @@ export default function Team() {
       {/* Intro blurb */}
       <div className="py-10 px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <p className="text-stone-600 leading-relaxed">
+          <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
             A small group of builders, engineers, and creators who share a passion
             for making things — from software to Minecraft structures.
           </p>

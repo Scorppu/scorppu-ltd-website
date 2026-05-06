@@ -21,7 +21,13 @@ export default function ProfileHero({ member }: { member: TeamMember }) {
     <>
       {member.bannerURL ? (
         <div className="flex flex-col items-center px-6 md:px-8 flex-grow mb-8">
-          <img src={member.bannerURL} alt="Banner" className="banner-image" />
+          <Image
+            src={member.bannerURL}
+            alt="Banner"
+            width={1490}
+            height={0}
+            className="banner-image"
+          />
         </div>
       ) : (
         <div className="flex flex-col items-center px-6 md:px-8 flex-grow">

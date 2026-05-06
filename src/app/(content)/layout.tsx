@@ -9,8 +9,8 @@ export default function ContentLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-white text-black flex flex-col">
-      <div className="fixed w-full top-0 left-0 z-20 bg-white shadow-md">
+    <div className="min-h-screen bg-white dark:bg-stone-950 text-black dark:text-stone-100 flex flex-col">
+      <div className="fixed w-full top-0 left-0 z-20 bg-white dark:bg-stone-950 shadow-md dark:shadow-none dark:border-b dark:border-stone-800">
         <NavBar />
       </div>
 

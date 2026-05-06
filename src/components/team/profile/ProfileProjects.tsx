@@ -11,10 +11,10 @@ export default function ProfileProjects({ projects }: { projects: Project[] }) {
         {projects.map(({ name, description, githubURL }) => (
           <div
             key={name}
-            className="bg-stone-50 rounded-lg border border-stone-200 p-6 flex flex-col"
+            className="bg-stone-50 dark:bg-stone-800 rounded-lg border border-stone-200 dark:border-stone-700 p-6 flex flex-col"
           >
             <h3 className="text-lg font-semibold mb-2">{name}</h3>
-            <p className="text-sm text-stone-500 leading-relaxed flex-grow">
+            <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed flex-grow">
               {description}
             </p>
             {githubURL && (
@@ -22,7 +22,7 @@ export default function ProfileProjects({ projects }: { projects: Project[] }) {
                 href={githubURL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 flex items-center gap-2 text-sm font-medium text-stone-700 hover:text-stone-900 transition-colors duration-200"
+                className="mt-4 flex items-center gap-2 text-sm font-medium text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-200"
               >
                 <FaGithub size={18} />
                 View on GitHub
