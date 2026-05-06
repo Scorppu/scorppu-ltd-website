@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,14 +21,16 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full top-0 left-0 z-20 transition-all duration-300 ${
-        activeStyle ? "bg-white shadow-md" : "bg-transparent"
+      className={`fixed w-full top-0 left-0 z-20 transition-all duration-300 border-b ${
+        activeStyle
+          ? "bg-white dark:bg-stone-950 shadow-md dark:shadow-none border-transparent dark:border-stone-800"
+          : "bg-transparent border-transparent"
       }`}
     >
       <nav className="w-full h-20 flex items-center justify-between px-4 md:px-8">
         <div
           className={`transition-colors duration-300 ${
-            activeStyle ? "text-black" : "text-white"
+            activeStyle ? "text-black dark:text-stone-100" : "text-white"
           }`}
         >
           <Link href="/" className="text-2xl md:text-3xl">
@@ -37,7 +40,7 @@ export default function Header() {
 
         {/* Mobile menu button */}
         <button
-          className={`md:hidden ${activeStyle ? "text-black" : "text-white"}`}
+          className={`md:hidden ${activeStyle ? "text-black dark:text-stone-100" : "text-white"}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -58,7 +61,7 @@ export default function Header() {
 
         <div
           className={`hidden md:flex gap-8 items-center font-medium text-base transition-colors duration-300 ${
-            activeStyle ? "text-black" : "text-white"
+            activeStyle ? "text-black dark:text-stone-100" : "text-white"
           }`}
         >
           {/* <Link href="/gallery" className="hover:opacity-75">
@@ -73,12 +76,13 @@ export default function Header() {
           <Link href="/contact" className="hover:opacity-75">
             {"CONTACT"}
           </Link>
+          <ThemeToggle />
         </div>
       </nav>
 
       {/* Mobile menu */}
       <div
-        className={`absolute top-20 left-0 w-full bg-white border-t md:hidden z-30 overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`absolute top-20 left-0 w-full bg-white dark:bg-stone-950 border-t dark:border-stone-700 md:hidden z-30 overflow-hidden transition-all duration-300 ease-in-out ${
           isMenuOpen
             ? "max-h-96 opacity-100 translate-y-0"
             : "max-h-0 opacity-0 -translate-y-2 pointer-events-none"
@@ -87,22 +91,23 @@ export default function Header() {
         <div className="flex flex-col gap-4 p-4">
           <Link
             href="/team"
-            className="hover:opacity-75 font-medium text-black"
+            className="hover:opacity-75 font-medium text-black dark:text-stone-100"
           >
             TEAM
           </Link>
           <Link
             href="/about"
-            className="hover:opacity-75 font-medium text-black"
+            className="hover:opacity-75 font-medium text-black dark:text-stone-100"
           >
             ABOUT
           </Link>
           <Link
             href="/contact"
-            className="hover:opacity-75 font-medium text-black"
+            className="hover:opacity-75 font-medium text-black dark:text-stone-100"
           >
             CONTACT
           </Link>
+          <ThemeToggle />
         </div>
       </div>
     </header>

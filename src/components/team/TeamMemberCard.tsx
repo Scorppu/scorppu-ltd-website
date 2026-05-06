@@ -54,7 +54,7 @@ export default function TeamMemberCard({
   );
 
   return (
-    <div className="relative bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center w-64 flex-shrink-0 border-t-4 border-stone-700 hover:shadow-xl transition-shadow duration-200">
+    <div className="relative bg-white dark:bg-stone-800 rounded-lg shadow-md p-6 flex flex-col items-center text-center w-64 flex-shrink-0 border-t-4 border-stone-700 hover:shadow-xl transition-shadow duration-200">
       {/* Full-card link overlay — only when url is provided */}
       {url && (
         <Link
@@ -81,11 +81,11 @@ export default function TeamMemberCard({
       )}
 
       {/* Name */}
-      <h3 className="text-xl font-semibold text-gray-800 mb-3">{name}</h3>
+      <h3 className="text-xl font-semibold text-gray-800 dark:text-stone-100 mb-3">{name}</h3>
 
       {/* Description */}
       {description && (
-        <p className="text-sm text-gray-500 italic leading-relaxed mb-4">
+        <p className="text-sm text-gray-500 dark:text-stone-400 italic leading-relaxed mb-4">
           {description}
         </p>
       )}
@@ -93,7 +93,7 @@ export default function TeamMemberCard({
       <div className="mt-auto">
         {/* Role */}
         {role && (
-          <p className="text-xs font-bold text-stone-600 uppercase tracking-widest mb-5">
+          <p className="text-xs font-bold text-stone-600 dark:text-stone-400 uppercase tracking-widest mb-5">
             {role}
           </p>
         )}
@@ -101,8 +101,8 @@ export default function TeamMemberCard({
         {/* Social Links */}
         {socialLinks.length > 0 && (
           <>
-            <div className="w-full border-t border-gray-100 mb-4" />
-            <div className="relative z-10 flex justify-center gap-5 text-gray-800">
+            <div className="w-full border-t border-gray-100 dark:border-stone-700 mb-4" />
+            <div className="relative z-10 flex justify-center gap-5 text-gray-800 dark:text-stone-300">
               {socialLinks.map(({ href, icon }) => (
                 <a
                   key={href}

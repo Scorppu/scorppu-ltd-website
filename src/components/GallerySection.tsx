@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState, useEffect } from "react";
 
 interface GalleryItem {
@@ -78,8 +77,8 @@ export default function GallerySection() {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="font-semibold text-black text-lg">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
+                <h3 className="font-semibold text-black dark:text-stone-100 text-lg">{item.title}</h3>
+                <p className="text-gray-600 dark:text-stone-400 text-sm">{item.description}</p>
               </div>
             ))}
           </div>
@@ -100,7 +99,7 @@ export default function GallerySection() {
         >
           {/* Modal Content */}
           <div
-            className="relative w-full max-w-4xl bg-white flex flex-col max-h-[90vh]"
+            className="relative w-full max-w-4xl bg-white dark:bg-stone-900 flex flex-col max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -123,8 +122,8 @@ export default function GallerySection() {
 
             {/* Image Info */}
             <div className="p-6">
-              <h3 className="text-2xl font-semibold mb-2 text-black">{selectedImage.title}</h3>
-              <p className="text-gray-700">{selectedImage.description}</p>
+              <h3 className="text-2xl font-semibold mb-2 text-black dark:text-stone-100">{selectedImage.title}</h3>
+              <p className="text-gray-700 dark:text-stone-300">{selectedImage.description}</p>
             </div>
           </div>
         </div>
