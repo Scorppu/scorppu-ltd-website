@@ -66,7 +66,7 @@ export default function About() {
           </p>
           <Link
             href="/team"
-            className="px-8 py-3 border-2 border-black dark:border-stone-300 text-black dark:text-stone-300 hover:bg-black dark:hover:bg-stone-300 hover:text-white dark:hover:text-stone-950 transition-colors duration-300 inline-block"
+            className="px-8 py-3 border-2 border-black dark:border-stone-300 text-black dark:text-stone-300 hover:bg-black dark:hover:bg-stone-300 hover:text-white dark:hover:text-stone-950 inline-block"
           >
             MEET THE TEAM
           </Link>

@@ -20,16 +20,18 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={`fixed w-full top-0 left-0 z-20 transition-all duration-300 border-b ${
-        activeStyle
-          ? "bg-white dark:bg-stone-950 shadow-md dark:shadow-none border-transparent dark:border-stone-800"
-          : "bg-transparent border-transparent"
-      }`}
-    >
+    <header className="fixed w-full top-0 left-0 z-20">
+      {/* Background layer — fades in/out independently */}
+      <div
+        className={`absolute inset-0 -z-10 transition-opacity duration-300 bg-white dark:bg-stone-950 shadow-md dark:shadow-none border-b ${
+          activeStyle
+            ? "opacity-100 border-transparent dark:border-stone-800"
+            : "opacity-0 border-transparent"
+        }`}
+      />
       <nav className="w-full h-20 flex items-center justify-between px-4 md:px-8">
         <div
-          className={`transition-colors duration-300 ${
+          className={` ${
             activeStyle ? "text-black dark:text-stone-100" : "text-white"
           }`}
         >
@@ -60,7 +62,7 @@ export default function Header() {
         </button>
 
         <div
-          className={`hidden md:flex gap-8 items-center font-medium text-base transition-colors duration-300 ${
+          className={`hidden md:flex gap-8 items-center font-medium text-base ${
             activeStyle ? "text-black dark:text-stone-100" : "text-white"
           }`}
         >
@@ -76,15 +78,21 @@ export default function Header() {
           <Link href="/contact" className="hover:opacity-75">
             {"CONTACT"}
           </Link>
-          <ThemeToggle />
+          <ThemeToggle
+            className={
+              activeStyle
+                ? "text-black dark:text-stone-100"
+                : "text-white dark:text-white"
+            }
+          />
         </div>
       </nav>
 
       {/* Mobile menu */}
       <div
-        className={`absolute top-20 left-0 w-full bg-white dark:bg-stone-950 border-t dark:border-stone-700 md:hidden z-30 overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`absolute top-20 left-0 w-full bg-white dark:bg-stone-950 border-t border-b dark:border-stone-700 md:hidden z-30 overflow-hidden transition-all duration-300 ease-in-out ${
           isMenuOpen
-            ? "max-h-96 opacity-100 translate-y-0"
+            ? "max-h-96 opacity-100 translate-y-0 shadow-md dark:shadow-none"
             : "max-h-0 opacity-0 -translate-y-2 pointer-events-none"
         }`}
       >
@@ -107,7 +115,7 @@ export default function Header() {
           >
             CONTACT
           </Link>
-          <ThemeToggle />
+          <ThemeToggle className="text-black dark:text-stone-100" />
         </div>
       </div>
     </header>

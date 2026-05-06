@@ -46,7 +46,7 @@ export default function NavBar() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="absolute top-20 left-0 w-full bg-white dark:bg-stone-950 border-t dark:border-stone-700 md:hidden">
+        <div className="absolute top-20 left-0 w-full bg-white dark:bg-stone-950 border-t border-b dark:border-stone-700 shadow-md dark:shadow-none md:hidden">
           <div className="flex flex-col gap-4 p-4">
             {/* <Link href="/gallery" className="hover:opacity-75">GALLERY</Link> */}
             <Link href="/team" className="hover:opacity-75">
