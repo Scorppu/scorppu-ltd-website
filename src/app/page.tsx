@@ -3,7 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 import WelcomeIntro from "@/components/WelcomeIntro";
 import HomeHero from "@/components/home/HomeHero";
 import HomeAbout from "@/components/home/HomeAbout";
-import HomePhotos from "@/components/home/HomePhotos";
+import HomeEditorial from "@/components/home/HomeEditorial";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <HomeHero />
         <HomeAbout />
-        <HomePhotos />
+        <HomeEditorial />
       </main>
       <SiteFooter />
     </div>

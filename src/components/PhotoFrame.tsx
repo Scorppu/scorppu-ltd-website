@@ -56,7 +56,7 @@ export default function PhotoFrame({
       <figcaption className="mt-3 text-base text-[var(--muted)]">
         {photo.label}
         {!photo.src ? (
-          <span className="ml-2 text-[var(--accent)]">· awaiting file</span>
+          <span className="ml-2 text-[var(--accent)]">· swap-ready</span>
         ) : null}
       </figcaption>
     </figure>

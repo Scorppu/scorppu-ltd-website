@@ -37,14 +37,14 @@ scorppu-ltd-website/
 │   ├── components/
 │   │   ├── SiteHeader.tsx
 │   │   ├── SiteFooter.tsx
-│   │   ├── ThemeToggle.tsx
+│   │   ├── SignatureMark.tsx
 │   │   ├── home/                   # Homepage sections
 │   │   └── portfolio/              # CV page sections
 │   ├── data/
 │   │   └── portfolio.ts            # Updatable portfolio content
 │   └── types/
 │       └── portfolio.ts
-├── public/                         # Static assets (portrait, building, CV)
+├── public/                         # Static assets (portrait, building, CV, signature, photos)
 ├── docs/
 ├── migrations/
 ├── next.config.ts
@@ -92,24 +92,20 @@ not via `create-cloudflare` or the Wrangler CLI scaffold. Respect this setup.
 
 ---
 
-## Dark Mode
+## Theme
 
-The site supports user-controlled dark mode via a toggle in the navigation.
-
-- **Mechanism**: Tailwind v4 class-based dark mode using `@custom-variant dark (&:where(.dark, .dark *))` in `globals.css`. The `dark` class is toggled on `<html>`.
-- **Persistence**: The user's preference is stored in `localStorage` under the key `'theme'` (`'dark'` or `'light'`).
-- **Anti-FOUC**: An inline `<script>` in `<head>` (in `src/app/layout.tsx`) reads `localStorage` and applies the `dark` class before first paint. Falls back to `prefers-color-scheme` if no preference is stored.
-- **Toggle component**: `src/components/ThemeToggle.tsx` — a `"use client"` component in `SiteHeader`.
-- When adding new UI, always include `dark:` variants for any background, text, or border color classes.
+Light-only. No dark mode toggle, no `dark:` variants, no color-scheme switching.
 
 ---
 
 ## Design Direction
 
-- Typography-forward, near-monochrome, editorial personal portfolio.
-- Quieter than loud showcase sites: restrained type scale, subtle motion only.
+- Typography-forward, near-monochrome with a warm editorial tint.
+- Clean motion (welcome intro, section reveals, hover) — crafted, not theatrical.
 - Main visuals: portrait (`/profilePics/scorppu.jpg`) and Scorppu Ltd Minecraft building (`/scorppultd.png`).
+- Swap-ready photo slots and signature live in `src/data/portfolio.ts` (`photos`, `signature`).
 - Do not invent biographical facts; update content in `src/data/portfolio.ts`.
+- Cloudflare Pages: keep `.npmrc` `legacy-peer-deps=true` for `npx @cloudflare/next-on-pages@1`.
 
 ```bash
 npm run dev     # Start dev server with Turbopack

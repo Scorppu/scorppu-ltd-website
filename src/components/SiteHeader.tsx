@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
 
 type SiteHeaderProps = {
   variant?: "overlay" | "solid";
@@ -76,13 +75,6 @@ export default function SiteHeader({ variant = "solid" }: SiteHeaderProps) {
               {link.label}
             </Link>
           ))}
-          <ThemeToggle
-            className={
-              inverted
-                ? "text-white dark:text-white"
-                : "text-[var(--foreground)]"
-            }
-          />
         </div>
       </nav>
 
@@ -102,7 +94,6 @@ export default function SiteHeader({ variant = "solid" }: SiteHeaderProps) {
               {link.label}
             </Link>
           ))}
-          <ThemeToggle className="text-[var(--foreground)]" />
         </div>
       </div>
     </header>

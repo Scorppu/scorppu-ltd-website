@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 :root {
   --background: #f7f4ef;
   --foreground: #1a1814;
@@ -11,17 +9,6 @@
   --line: #ddd4c6;
   --elevated: #fffdf9;
   --ink-deep: #12100e;
-}
-
-.dark {
-  --background: #141210;
-  --foreground: #f3eee6;
-  --muted: #a59b8f;
-  --accent: #c4a07a;
-  --accent-soft: #2a241e;
-  --line: #3a342c;
-  --elevated: #1c1915;
-  --ink-deep: #0c0b09;
 }
 
 @theme inline {
@@ -109,6 +96,7 @@
 }
 
 html {
+  color-scheme: light;
   scroll-behavior: smooth;
 }
 
@@ -224,7 +212,7 @@ body {
 }
 
 .welcome-overlay {
-  animation: welcome-panel-out 0.9s cubic-bezier(0.76, 0, 0.24, 1) 1.35s forwards;
+  animation: welcome-panel-out 0.9s cubic-bezier(0.76, 0, 0.24, 1) 1.45s forwards;
 }
 
 .welcome-mark {
@@ -237,7 +225,7 @@ body {
 }
 
 .welcome-sub {
-  animation: welcome-mark-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+  animation: welcome-mark-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
 }
 
 @media (prefers-reduced-motion: reduce) {

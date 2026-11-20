@@ -10,10 +10,13 @@ export default function ExperienceSection() {
           <SectionHeading eyebrow="Experience" title="Selected roles" />
         </Reveal>
 
-        <div className="divide-y divide-[var(--line)]">
+        <div className="flex flex-col gap-10 md:gap-14">
           {portfolio.experience.map((entry, index) => (
-            <Reveal key={`${entry.company}-${entry.title}-${entry.startDate}`} delay={(Math.min(index, 2) + 1) as 1 | 2 | 3}>
-              <article className="grid gap-4 py-9 first:pt-0 last:pb-0 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.6fr)] md:gap-10">
+            <Reveal
+              key={`${entry.company}-${entry.title}-${entry.startDate}`}
+              delay={(Math.min(index, 2) + 1) as 1 | 2 | 3}
+            >
+              <article className="grid gap-5 border-t border-[var(--line)] pt-10 first:border-t-0 first:pt-0 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.6fr)] md:gap-12">
                 <div>
                   <p className="text-base text-[var(--muted)] md:text-lg">
                     {entry.startDate} – {entry.endDate}

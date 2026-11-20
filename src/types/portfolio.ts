@@ -31,6 +31,10 @@ export type Project = {
   status?: string;
   description: string;
   githubURL: string | null;
+  /** Public product page URL (distinct from repo). Null or placeholder until live. */
+  productURL?: string | null;
+  /** True when productURL is a swap-ready placeholder, not a live link. */
+  productURLIsPlaceholder?: boolean;
 };
 
 export type Interest = {
@@ -49,6 +53,14 @@ export type PhotoSlot = {
   aspect: "4/5" | "3/4" | "1/1" | "16/9";
 };
 
+export type SignatureAsset = {
+  /** Public path to the signature file (SVG or PNG). */
+  src: string;
+  alt: string;
+  /** True while the checked-in file is still a placeholder graphic. */
+  isPlaceholder: boolean;
+};
+
 export type Portfolio = {
   name: string;
   handle: string;
@@ -60,6 +72,7 @@ export type Portfolio = {
   email: string;
   portraitURL: string;
   photos: PhotoSlot[];
+  signature: SignatureAsset;
   featuredBuilding: {
     src: string;
     alt: string;

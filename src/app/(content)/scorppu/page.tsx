@@ -4,7 +4,7 @@ import PortfolioHero from "@/components/portfolio/PortfolioHero";
 import ExperienceSection from "@/components/portfolio/ExperienceSection";
 import EducationSection from "@/components/portfolio/EducationSection";
 import ProjectsSection from "@/components/portfolio/ProjectsSection";
-import PhotosSection from "@/components/portfolio/PhotosSection";
+import EditorialPhoto from "@/components/portfolio/EditorialPhoto";
 import FeaturedBuilding from "@/components/portfolio/FeaturedBuilding";
 import InterestsSection from "@/components/portfolio/InterestsSection";
 import ContactSection from "@/components/portfolio/ContactSection";
@@ -22,8 +22,8 @@ export default function ScorppuPage() {
       <PortfolioHero />
       <ExperienceSection />
       <EducationSection />
+      <EditorialPhoto photoId="editorial-profile" elevated />
       <ProjectsSection />
-      <PhotosSection />
       <FeaturedBuilding />
       <InterestsSection />
       <ContactSection />
