@@ -1,15 +1,13 @@
-# Scorppu Ltd Website
+# Eugene Chan — Portfolio
 
-Personal portfolio and creative hub for Scorppu and friends. Built with Next.js.
+Personal portfolio site for Eugene Chan (Scorppu). Built with Next.js and deployed on Cloudflare Pages.
 
 ## Pages
 
-- `/` — Home page with hero and gallery section
-- `/about` — About Scorppu Ltd
-- `/team` — Meet the team
-- `/team/<handle>` — Individual team member profiles
-- `/gallery` — Gallery of projects and builds
-- `/contact` — Contact page
+- `/` — Cover page with name, role, and Scorppu Ltd Minecraft building
+- `/scorppu` — Personal CV: experience, education, projects, interests, contact
+
+Content is editable in `src/data/portfolio.ts`.
 
 ## Tech Stack
 
@@ -17,7 +15,6 @@ Personal portfolio and creative hub for Scorppu and friends. Built with Next.js.
 - [React 19](https://react.dev)
 - [Tailwind CSS v4](https://tailwindcss.com)
 - [TypeScript](https://www.typescriptlang.org)
-- [react-icons](https://react-icons.github.io/react-icons)
 
 ## Getting Started
 
@@ -36,7 +33,3 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 | `npm run build` | Production build |
 | `npm run start` | Start production server |
 | `npm run lint` | Run ESLint |
-
-## Team Data
-
-Team member data lives in `src/data/`. Members listed in `team-hidden.json` are not shown on the public team page but have profile pages accessible via their slug.
