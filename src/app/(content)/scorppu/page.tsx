@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import WelcomeIntro from "@/components/WelcomeIntro";
 import PortfolioHero from "@/components/portfolio/PortfolioHero";
 import ExperienceSection from "@/components/portfolio/ExperienceSection";
 import EducationSection from "@/components/portfolio/EducationSection";
 import ProjectsSection from "@/components/portfolio/ProjectsSection";
+import PhotosSection from "@/components/portfolio/PhotosSection";
 import FeaturedBuilding from "@/components/portfolio/FeaturedBuilding";
 import InterestsSection from "@/components/portfolio/InterestsSection";
 import ContactSection from "@/components/portfolio/ContactSection";
@@ -16,10 +18,12 @@ export const metadata: Metadata = {
 export default function ScorppuPage() {
   return (
     <>
+      <WelcomeIntro />
       <PortfolioHero />
       <ExperienceSection />
       <EducationSection />
       <ProjectsSection />
+      <PhotosSection />
       <FeaturedBuilding />
       <InterestsSection />
       <ContactSection />

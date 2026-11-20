@@ -16,6 +16,7 @@ const eslintConfig = [
       "node_modules/**",
       ".next/**",
       ".open-next/**",
+      ".vercel/**",
       "out/**",
       "build/**",
       "next-env.d.ts",

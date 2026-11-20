@@ -1,15 +1,19 @@
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import WelcomeIntro from "@/components/WelcomeIntro";
 import HomeHero from "@/components/home/HomeHero";
 import HomeAbout from "@/components/home/HomeAbout";
+import HomePhotos from "@/components/home/HomePhotos";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-stone-950">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+      <WelcomeIntro />
       <SiteHeader variant="overlay" />
       <main>
         <HomeHero />
         <HomeAbout />
+        <HomePhotos />
       </main>
       <SiteFooter />
     </div>

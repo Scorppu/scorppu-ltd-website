@@ -7,7 +7,7 @@ export default function ContentLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen flex-col bg-white text-stone-900 dark:bg-stone-950 dark:text-stone-100">
+    <div className="flex min-h-screen flex-col bg-[var(--background)] text-[var(--foreground)]">
       <SiteHeader variant="solid" />
       <main className="flex-grow">{children}</main>
       <SiteFooter />

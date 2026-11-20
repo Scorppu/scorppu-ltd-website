@@ -38,6 +38,17 @@ export type Interest = {
   description: string;
 };
 
+export type PhotoSlot = {
+  id: string;
+  label: string;
+  alt: string;
+  /** Set to a public path when the file is ready; null keeps the placeholder. */
+  src: string | null;
+  /** Suggested drop-in path for easy swapping later. */
+  pathHint?: string;
+  aspect: "4/5" | "3/4" | "1/1" | "16/9";
+};
+
 export type Portfolio = {
   name: string;
   handle: string;
@@ -48,6 +59,7 @@ export type Portfolio = {
   about: string;
   email: string;
   portraitURL: string;
+  photos: PhotoSlot[];
   featuredBuilding: {
     src: string;
     alt: string;

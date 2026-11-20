@@ -25,7 +25,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-white text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100">
+      <body className="bg-[var(--background)] text-[var(--foreground)] antialiased">
         {children}
       </body>
     </html>
