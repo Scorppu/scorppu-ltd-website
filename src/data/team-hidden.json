@@ -1,0 +1,51 @@
+{
+  "members": [
+    {
+      "slug": "cindylee",
+      "handle": "Cindy Lee",
+      "name": "Cindy Lee",
+      "role": "Journalist",
+      "shortBio": "Passionate writer",
+      "bio": "",
+      "imageURL": "/profilePics/cindy.jpg",
+      "socials": {
+        "youtube": "https://www.youtube.com/@angelhuntress7111"
+      },
+      "workExperience": [],
+      "projects": [],
+      "hobbies": [],
+      "cvURL": null,
+      "cvFilename": null
+    },
+    {
+      "slug": "chua",
+      "handle": "Chua",
+      "name": "Kevin Chua",
+      "role": "Doctor",
+      "shortBio": "",
+      "bio": "",
+      "imageURL": "/profilePics/chua.jpg",
+      "socials": {},
+      "workExperience": [],
+      "projects": [],
+      "hobbies": [],
+      "cvURL": null,
+      "cvFilename": null
+    },
+    {
+      "slug": "ball",
+      "handle": "Ball",
+      "name": "Reyes Lee",
+      "role": "Doctor",
+      "shortBio": "",
+      "bio": "",
+      "imageURL": "/profilePics/ball.jpg",
+      "socials": {},
+      "workExperience": [],
+      "projects": [],
+      "hobbies": [],
+      "cvURL": null,
+      "cvFilename": null
+    }
+  ]
+}
