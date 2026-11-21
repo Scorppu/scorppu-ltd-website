@@ -51,7 +51,7 @@ export default function ContactSection() {
             <PhotoFrame
               photo={aside}
               className="w-full max-w-xl md:max-w-none md:justify-self-end"
-              objectPosition="center 20%"
+              objectPosition="center center"
             />
           </Reveal>
         ) : null}
