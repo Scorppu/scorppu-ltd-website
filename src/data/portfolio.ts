@@ -136,9 +136,9 @@ export const portfolio: Portfolio = {
       name: "ServerForge",
       status: "upcoming public release",
       description:
-        "Project showcase for ServerForge. Product page is available as a shareable preview; a dedicated domain will follow.",
+        "Project showcase for ServerForge. Product page is live at the dedicated ServerForge domain.",
       githubURL: null,
-      productURL: "https://serverforge.pages.dev",
+      productURL: "https://serverforge.scorppu.ltd",
       productURLIsPlaceholder: false,
     },
     {
