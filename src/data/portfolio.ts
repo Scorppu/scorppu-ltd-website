@@ -39,9 +39,9 @@ export const portfolio: Portfolio = {
     },
   ],
   signature: {
-    src: "/signatures/eugene-signature.svg",
-    alt: "Signature placeholder for Eugene Chan",
-    isPlaceholder: true,
+    src: "/signatures/eugene-signature.png",
+    alt: "Signature of Eugene Chan (Scorppu)",
+    isPlaceholder: false,
   },
   featuredBuilding: {
     src: "/scorppultd.png",

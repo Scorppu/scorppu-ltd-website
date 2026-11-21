@@ -1,7 +1,7 @@
-# Signature drop-in
+# Signature
 
-Replace `eugene-signature.svg` with Eugene’s real signature file
-(SVG or PNG), then keep `portfolio.signature.src` pointing at that path
-in `src/data/portfolio.ts`.
+- `eugene-signature.jpg` — Eugene’s delivered brush-stroke signature (black on white).
+- `eugene-signature.png` — same ink with white keyed to transparency for page overlays.
 
-Current file is an explicit placeholder only — not a handwritten signature.
+`portfolio.signature.src` points at the transparent PNG used in the welcome intro
+and footer. Do not invent or redraw the signature.

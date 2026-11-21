@@ -54,7 +54,7 @@ export type PhotoSlot = {
 };
 
 export type SignatureAsset = {
-  /** Public path to the signature file (SVG or PNG). */
+  /** Public path to the signature file (PNG/JPG/SVG). */
   src: string;
   alt: string;
   /** True while the checked-in file is still a placeholder graphic. */
