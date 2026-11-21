@@ -5,6 +5,8 @@ type PhotoFrameProps = {
   photo: PhotoSlot;
   priority?: boolean;
   className?: string;
+  /** Optional object-position for subject framing. */
+  objectPosition?: string;
 };
 
 const aspectClass: Record<PhotoSlot["aspect"], string> = {
@@ -17,11 +19,13 @@ const aspectClass: Record<PhotoSlot["aspect"], string> = {
 /**
  * Swap-ready photo frame. Set `photo.src` in `src/data/portfolio.ts`
  * (or drop a file at `photo.pathHint`) to replace a placeholder.
+ * No captions — photos stand alone.
  */
 export default function PhotoFrame({
   photo,
   priority = false,
   className = "",
+  objectPosition = "center",
 }: PhotoFrameProps) {
   return (
     <figure className={`group ${className}`.trim()}>
@@ -34,8 +38,9 @@ export default function PhotoFrame({
             alt={photo.alt}
             fill
             priority={priority}
-            sizes="(max-width: 768px) 100vw, 420px"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 900px"
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            style={{ objectPosition }}
           />
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 border border-dashed border-[var(--line)] px-4 text-center">
@@ -53,12 +58,6 @@ export default function PhotoFrame({
           </div>
         )}
       </div>
-      <figcaption className="mt-3 text-base text-[var(--muted)]">
-        {photo.label}
-        {!photo.src ? (
-          <span className="ml-2 text-[var(--accent)]">· swap-ready</span>
-        ) : null}
-      </figcaption>
     </figure>
   );
 }

@@ -16,7 +16,7 @@ export default function PortfolioHero() {
 
   return (
     <section className="border-b border-[var(--line)]">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-16 pt-28 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:items-end md:gap-14 md:px-8 md:pb-24 md:pt-36">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-16 pt-28 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:items-end md:gap-12 md:px-8 md:pb-24 md:pt-36">
         <Reveal>
           <div>
             <p className="text-base tracking-[0.18em] text-[var(--accent)] uppercase md:text-lg">
@@ -57,7 +57,12 @@ export default function PortfolioHero() {
         </Reveal>
 
         <Reveal delay={1}>
-          <PhotoFrame photo={portrait} priority className="max-w-md justify-self-end md:max-w-none" />
+          <PhotoFrame
+            photo={portrait}
+            priority
+            className="w-full justify-self-stretch"
+            objectPosition="center 18%"
+          />
         </Reveal>
       </div>
     </section>

@@ -20,9 +20,13 @@ export default function EditorialPhoto({
         elevated ? "paper-grid" : "paper-grid-soft"
       }`}
     >
-      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:px-8 md:py-24">
         <Reveal>
-          <PhotoFrame photo={photo} />
+          <PhotoFrame
+            photo={photo}
+            className="w-full"
+            objectPosition="center 35%"
+          />
         </Reveal>
       </div>
     </section>

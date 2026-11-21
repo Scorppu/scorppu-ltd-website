@@ -9,7 +9,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="paper-grid scroll-mt-28 border-t border-[var(--line)]">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:items-end md:gap-14 md:px-8 md:py-24">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:items-end md:gap-14 md:px-8 md:py-24">
         <div>
           <Reveal>
             <SectionHeading
@@ -48,7 +48,11 @@ export default function ContactSection() {
 
         {aside ? (
           <Reveal delay={2}>
-            <PhotoFrame photo={aside} className="max-w-sm md:justify-self-end" />
+            <PhotoFrame
+              photo={aside}
+              className="w-full max-w-xl md:max-w-none md:justify-self-end"
+              objectPosition="center 20%"
+            />
           </Reveal>
         ) : null}
       </div>
