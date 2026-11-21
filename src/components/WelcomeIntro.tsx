@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { portfolio } from "@/data/portfolio";
 import SignatureMark from "@/components/SignatureMark";
 
 const STORAGE_KEY = "scorppu-welcome-played";
@@ -51,8 +52,12 @@ export default function WelcomeIntro() {
       className="welcome-overlay fixed inset-0 z-[100] flex items-center justify-center bg-[var(--ink-deep)]"
       aria-hidden="true"
     >
-      <div className="welcome-mark px-6">
+      <div className="welcome-mark flex flex-col items-start px-6">
         <SignatureMark size="intro" inverted />
+        <p className="welcome-sub mt-3 text-2xl font-medium tracking-tight text-white sm:text-3xl">
+          {portfolio.name}
+        </p>
+        <div className="welcome-line mt-4 h-px w-16 bg-white/45" />
       </div>
     </div>
   );

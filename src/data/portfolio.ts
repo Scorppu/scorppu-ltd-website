@@ -22,6 +22,14 @@ export const portfolio: Portfolio = {
       aspect: "4/5",
     },
     {
+      id: "about-personal",
+      label: "About",
+      alt: "Eugene Chan outdoors in a white tee, looking back over his shoulder",
+      src: "/photos/about-personal.jpg",
+      pathHint: "/photos/about-personal.jpg",
+      aspect: "4/5",
+    },
+    {
       id: "editorial-profile",
       label: "Editorial",
       alt: "Eugene Chan in a grey suit and glasses, right hand raised with one finger up, in a crowded indoor room",
