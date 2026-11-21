@@ -1,4 +1,5 @@
 import { portfolio } from "@/data/portfolio";
+import BrandLink from "@/components/BrandLink";
 import PhotoFrame from "@/components/PhotoFrame";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "./SectionHeading";
@@ -26,6 +27,18 @@ export default function ContactSection() {
               >
                 {portfolio.email}
               </a>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-base md:text-lg">
+                {portfolio.socials.linkedin && (
+                  <BrandLink href={portfolio.socials.linkedin} site="linkedin">
+                    LinkedIn
+                  </BrandLink>
+                )}
+                {portfolio.socials.github && (
+                  <BrandLink href={portfolio.socials.github} site="github">
+                    GitHub
+                  </BrandLink>
+                )}
+              </div>
               <p className="text-base md:text-lg">
                 scorppu.ltd · {portfolio.location}
               </p>

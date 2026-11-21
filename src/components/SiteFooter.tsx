@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { portfolio } from "@/data/portfolio";
+import BrandLink from "@/components/BrandLink";
 import SignatureMark from "@/components/SignatureMark";
 
 export default function SiteFooter() {
@@ -26,24 +27,14 @@ export default function SiteFooter() {
             {portfolio.email}
           </a>
           {portfolio.socials.linkedin && (
-            <a
-              href={portfolio.socials.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-underline"
-            >
+            <BrandLink href={portfolio.socials.linkedin} site="linkedin">
               LinkedIn
-            </a>
+            </BrandLink>
           )}
           {portfolio.socials.github && (
-            <a
-              href={portfolio.socials.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-underline"
-            >
+            <BrandLink href={portfolio.socials.github} site="github">
               GitHub
-            </a>
+            </BrandLink>
           )}
         </div>
       </div>

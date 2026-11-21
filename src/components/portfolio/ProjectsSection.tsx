@@ -1,4 +1,5 @@
 import { portfolio } from "@/data/portfolio";
+import BrandLink, { BrandMark } from "@/components/BrandLink";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -37,33 +38,34 @@ export default function ProjectsSection() {
                   <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-base md:text-lg">
                     {project.productURL ? (
                       project.productURLIsPlaceholder ? (
-                        <span className="text-[var(--muted)]">
+                        <BrandMark
+                          site="product"
+                          className="text-[var(--muted)]"
+                        >
                           Product page ·{" "}
                           <code className="text-[var(--accent)]">
                             {project.productURL}
                           </code>{" "}
                           <span className="text-[var(--accent)]">(swap when public)</span>
-                        </span>
+                        </BrandMark>
                       ) : (
-                        <a
+                        <BrandLink
                           href={project.productURL}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="link-underline text-[var(--muted)]"
+                          site="product"
+                          className="text-[var(--muted)]"
                         >
                           Visit product
-                        </a>
+                        </BrandLink>
                       )
                     ) : null}
                     {project.githubURL ? (
-                      <a
+                      <BrandLink
                         href={project.githubURL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="link-underline text-[var(--muted)]"
+                        site="github"
+                        className="text-[var(--muted)]"
                       >
                         View on GitHub
-                      </a>
+                      </BrandLink>
                     ) : null}
                   </div>
                 </article>

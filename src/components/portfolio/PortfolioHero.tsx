@@ -1,4 +1,5 @@
 import { portfolio } from "@/data/portfolio";
+import BrandLink from "@/components/BrandLink";
 import PhotoFrame from "@/components/PhotoFrame";
 import Reveal from "@/components/Reveal";
 
@@ -33,24 +34,14 @@ export default function PortfolioHero() {
 
             <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-base text-[var(--muted)] md:text-lg">
               {portfolio.socials.linkedin && (
-                <a
-                  href={portfolio.socials.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-underline"
-                >
+                <BrandLink href={portfolio.socials.linkedin} site="linkedin">
                   LinkedIn
-                </a>
+                </BrandLink>
               )}
               {portfolio.socials.github && (
-                <a
-                  href={portfolio.socials.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-underline"
-                >
+                <BrandLink href={portfolio.socials.github} site="github">
                   GitHub
-                </a>
+                </BrandLink>
               )}
               {portfolio.cvURL && (
                 <a
