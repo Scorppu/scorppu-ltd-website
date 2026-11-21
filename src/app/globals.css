@@ -1,100 +1,271 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f4ef;
+  --foreground: #1a1814;
+  --muted: #6f675e;
+  --accent: #8f5e3a;
+  --accent-soft: #ebe3d7;
+  --line: #ddd4c6;
+  --elevated: #fffdf9;
+  --ink-deep: #12100e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-line: var(--line);
+  --color-elevated: var(--elevated);
+  --color-ink-deep: var(--ink-deep);
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
 }
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('/fonts/Outfit-Thin.ttf') format('truetype');
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('/fonts/Outfit-ExtraLight.ttf') format('truetype');
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('/fonts/Outfit-Light.ttf') format('truetype');
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('/fonts/Outfit-Regular.ttf') format('truetype');
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('/fonts/Outfit-Medium.ttf') format('truetype');
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('/fonts/Outfit-SemiBold.ttf') format('truetype');
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('/fonts/Outfit-Bold.ttf') format('truetype');
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('/fonts/Outfit-ExtraBold.ttf') format('truetype');
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('/fonts/Outfit-Black.ttf') format('truetype');
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-lite-youtube {
-  width: 100% !important;
-  max-width: 100% !important;
-  aspect-ratio: 16 / 9;
-  height: auto !important;
+::selection {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+  color: var(--foreground);
+}
+
+/**
+ * Dotted-grid paper texture for selected panels.
+ * Original tile at /textures/paper-dot-grid.svg — sparse dots + grid lines.
+ * Opacity is intentional: visible as paper texture, not wallpaper.
+ */
+.paper-grid {
+  background-color: var(--elevated);
+  background-image: url("/textures/paper-dot-grid.svg");
+  background-repeat: repeat;
+  background-size: 24px 24px;
+  background-position: 0 0;
+}
+
+.paper-grid-soft {
+  background-color: var(--background);
+  background-image: url("/textures/paper-dot-grid.svg");
+  background-repeat: repeat;
+  background-size: 24px 24px;
+  background-position: 0 0;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-settle {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes welcome-panel-out {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-105%);
+  }
+}
+
+@keyframes welcome-mark-in {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes welcome-line {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-hero-settle {
+  animation: hero-settle 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.08s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.16s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.24s;
+}
+
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 0.35s ease;
+}
+
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+.welcome-overlay {
+  animation: welcome-panel-out 0.9s cubic-bezier(0.76, 0, 0.24, 1) 1.45s forwards;
+}
+
+.welcome-mark {
+  animation: welcome-mark-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+.welcome-line {
+  transform-origin: left center;
+  animation: welcome-line 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
+}
+
+.welcome-sub {
+  animation: welcome-mark-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up,
+  .animate-hero-settle,
+  .welcome-overlay,
+  .welcome-mark,
+  .welcome-line,
+  .welcome-sub {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
