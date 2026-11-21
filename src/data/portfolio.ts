@@ -128,10 +128,10 @@ export const portfolio: Portfolio = {
       name: "ServerForge",
       status: "upcoming public release",
       description:
-        "Project showcase reserved for ServerForge. Product page and details will be linked here when it goes public.",
+        "Project showcase for ServerForge. Product page is available as a shareable preview; a dedicated domain will follow.",
       githubURL: null,
-      productURL: "#serverforge-product-url-placeholder",
-      productURLIsPlaceholder: true,
+      productURL: "https://serverforge.pages.dev",
+      productURLIsPlaceholder: false,
     },
     {
       name: "GPU Accelerated FX/FXCH",
