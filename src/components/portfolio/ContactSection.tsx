@@ -7,7 +7,7 @@ export default function ContactSection() {
   const aside = portfolio.photos.find((photo) => photo.id === "aside-profile");
 
   return (
-    <section id="contact" className="scroll-mt-28">
+    <section id="contact" className="paper-grid scroll-mt-28 border-t border-[var(--line)]">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:items-end md:gap-14 md:px-8 md:py-24">
         <div>
           <Reveal>

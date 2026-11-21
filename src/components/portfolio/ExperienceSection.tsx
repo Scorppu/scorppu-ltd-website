@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function ExperienceSection() {
   return (
-    <section className="border-b border-[var(--line)]">
+    <section className="paper-grid-soft border-b border-[var(--line)]">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <Reveal>
           <SectionHeading eyebrow="Experience" title="Selected roles" />

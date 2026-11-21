@@ -4,7 +4,7 @@ import SignatureMark from "@/components/SignatureMark";
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t border-[var(--line)] bg-[var(--elevated)]">
+    <footer className="paper-grid border-t border-[var(--line)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 md:flex-row md:items-end md:justify-between md:px-8">
         <div className="flex flex-col gap-4">
           <SignatureMark size="footer" className="items-start" />

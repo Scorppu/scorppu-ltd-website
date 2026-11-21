@@ -7,7 +7,7 @@ export default function HomeEditorial() {
   if (!photo) return null;
 
   return (
-    <section className="border-t border-[var(--line)] bg-[var(--elevated)]">
+    <section className="paper-grid border-t border-[var(--line)]">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <Reveal>
           <PhotoFrame photo={photo} />

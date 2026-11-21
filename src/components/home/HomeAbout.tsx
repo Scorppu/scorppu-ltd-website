@@ -15,7 +15,7 @@ export default function HomeAbout() {
     });
 
   return (
-    <section className="border-t border-[var(--line)] bg-[var(--background)]">
+    <section className="paper-grid-soft border-t border-[var(--line)]">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:gap-16 md:px-8 md:py-28">
         <Reveal>
           <PhotoFrame photo={portrait} />

@@ -115,6 +115,28 @@ body {
   color: var(--foreground);
 }
 
+/**
+ * Subtle dotted-grid paper texture for selected panels only.
+ * Original tile at /textures/paper-dot-grid.svg — sparse dots + faint lines.
+ */
+.paper-grid {
+  background-color: var(--elevated);
+  background-image: url("/textures/paper-dot-grid.svg");
+  background-repeat: repeat;
+  background-size: 28px 28px;
+  background-position: 0 0;
+}
+
+.paper-grid-soft {
+  background-color: var(--background);
+  background-image: url("/textures/paper-dot-grid.svg");
+  background-repeat: repeat;
+  background-size: 32px 32px;
+  background-position: 0 0;
+  /* Slightly quieter on the base paper tone */
+  background-blend-mode: multiply;
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
