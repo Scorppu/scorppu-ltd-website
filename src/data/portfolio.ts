@@ -140,10 +140,8 @@ export const portfolio: Portfolio = {
       githubURL: null,
       productURL: "https://serverforge.scorppu.ltd",
       productURLIsPlaceholder: false,
-      featured: true,
-      image: "/projects/serverforge.jpg",
-      imageAlt:
-        "ServerForge product page — local Minecraft server console with instance list",
+      logo: "/projects/serverforge-mark.png",
+      logoAlt: "ServerForge mark",
     },
     {
       name: "GPU Accelerated FX/FXCH",

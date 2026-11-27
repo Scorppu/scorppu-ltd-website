@@ -22,25 +22,36 @@ export default function SectionNav() {
 
     if (!sections.length) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    const pickActive = () => {
+      const scrollBottom = window.scrollY + window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
 
-        if (visible[0]?.target.id) {
-          setActiveId(visible[0].target.id);
+      // Short final sections never fill the IO band — pin Contact near page end.
+      if (docHeight - scrollBottom < 160) {
+        setActiveId("contact");
+        return;
+      }
+
+      // Spy line under the sticky header + subnav.
+      const spyY = window.scrollY + window.innerHeight * 0.32;
+      let current = sections[0].id;
+
+      for (const section of sections) {
+        if (section.offsetTop <= spyY) {
+          current = section.id;
         }
-      },
-      {
-        // Account for sticky header + subnav so the “current” section matches the viewport.
-        rootMargin: "-28% 0px -55% 0px",
-        threshold: [0, 0.2, 0.45, 0.7, 1],
-      },
-    );
+      }
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+      setActiveId(current);
+    };
+
+    pickActive();
+    window.addEventListener("scroll", pickActive, { passive: true });
+    window.addEventListener("resize", pickActive);
+    return () => {
+      window.removeEventListener("scroll", pickActive);
+      window.removeEventListener("resize", pickActive);
+    };
   }, []);
 
   return (
