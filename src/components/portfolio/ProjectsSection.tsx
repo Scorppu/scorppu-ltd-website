@@ -11,7 +11,7 @@ export default function ProjectsSection() {
   const listed = portfolio.projects.filter((project) => !project.featured);
 
   return (
-    <section className="field-beige border-b border-[var(--line)]">
+    <section id="projects" className="field-beige scroll-mt-36 border-b border-[var(--line)] md:scroll-mt-40">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <Reveal>
           <SectionHeading
@@ -34,20 +34,23 @@ export default function ProjectsSection() {
                 aria-label={`${featured.name} — open product page`}
                 className="group relative mt-5 block aspect-[16/9] w-full overflow-hidden bg-[var(--ink-deep)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
               >
-                <Image
-                  src={featured.image}
-                  alt={featured.imageAlt ?? `${featured.name} still`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 1152px"
-                  className="featured-project-still object-cover object-top transition-[transform,filter] duration-700 ease-out scale-[1.06] group-hover:scale-100 group-hover:blur-[2.5px] group-focus-visible:scale-100 group-focus-visible:blur-[2.5px]"
-                />
-                <div className="absolute inset-0 bg-[var(--ink-deep)]/35 transition-colors duration-700 group-hover:bg-[var(--ink-deep)]/55 group-focus-visible:bg-[var(--ink-deep)]/55" />
+                {/* Scale a wrapper (not the Next Image / filter) so zoom eases cleanly. */}
+                <div className="featured-project-still absolute inset-0">
+                  <Image
+                    src={featured.image}
+                    alt={featured.imageAlt ?? `${featured.name} still`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 1152px"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="featured-project-veil absolute inset-0" />
 
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center transition-transform duration-700 ease-out group-hover:-translate-y-2 group-focus-visible:-translate-y-2 md:px-12">
+                <div className="featured-project-copy absolute inset-0 flex flex-col items-center justify-center px-6 text-center md:px-12">
                   <span className="text-3xl font-medium tracking-tight text-white sm:text-4xl md:text-5xl">
                     {featured.name}
                   </span>
-                  <p className="mt-0 max-h-0 max-w-xl overflow-hidden text-base leading-relaxed text-white/90 opacity-0 transition-all duration-500 ease-out group-hover:mt-4 group-hover:max-h-40 group-hover:opacity-100 group-focus-visible:mt-4 group-focus-visible:max-h-40 group-focus-visible:opacity-100 md:text-lg">
+                  <p className="featured-project-desc mt-4 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
                     {featured.description}
                   </p>
                 </div>

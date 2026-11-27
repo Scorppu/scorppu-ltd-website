@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import WelcomeIntro from "@/components/WelcomeIntro";
 import PortfolioHero from "@/components/portfolio/PortfolioHero";
+import SectionNav from "@/components/portfolio/SectionNav";
 import ExperienceSection from "@/components/portfolio/ExperienceSection";
 import EducationSection from "@/components/portfolio/EducationSection";
 import ProjectsSection from "@/components/portfolio/ProjectsSection";
@@ -20,6 +21,7 @@ export default function ScorppuPage() {
     <>
       <WelcomeIntro />
       <PortfolioHero />
+      <SectionNav />
       <ExperienceSection />
       <EducationSection />
       <EditorialPhoto photoId="editorial-profile" elevated />
