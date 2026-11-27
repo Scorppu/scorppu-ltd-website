@@ -42,12 +42,13 @@ export default function SectionNav() {
 
     const jumpOffset = (id: string) => {
       const header = siteHeaderHeight();
-      // Extra slack so the prior section doesn’t peek above the sticky bars.
-      const slack = 28;
+      // Tuck the section flush under the sticky chrome (extra positive
+      // offset scrolls *less* and leaves a strip of the prior section).
+      const tuck = -6;
       // About sits above this sticky nav in document order.
-      if (id === "about") return header + slack;
+      if (id === "about") return header + tuck;
       const nav = navRef.current?.offsetHeight ?? 48;
-      return header + nav + slack;
+      return header + nav + tuck;
     };
 
     const scrollToSection = (id: string) => {
