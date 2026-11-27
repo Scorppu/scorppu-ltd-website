@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { portfolio } from "@/data/portfolio";
 import BrandLink, { BrandMark } from "@/components/BrandLink";
 import Reveal from "@/components/Reveal";
@@ -5,7 +6,10 @@ import SectionHeading from "./SectionHeading";
 
 export default function ProjectsSection() {
   return (
-    <section className="border-b border-[var(--line)]">
+    <section
+      id="projects"
+      className="field-beige section-anchor border-b border-[var(--line)]"
+    >
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <Reveal>
           <SectionHeading
@@ -22,7 +26,16 @@ export default function ProjectsSection() {
             return (
               <Reveal key={project.name} delay={(Math.min(index, 2) + 1) as 1 | 2 | 3}>
                 <article className="border-t border-[var(--line)] pt-10 first:border-t-0 first:pt-0">
-                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                    {project.logo ? (
+                      <Image
+                        src={project.logo}
+                        alt={project.logoAlt ?? `${project.name} logo`}
+                        width={36}
+                        height={36}
+                        className="size-8 shrink-0 md:size-9"
+                      />
+                    ) : null}
                     <h3 className="text-xl font-medium text-[var(--foreground)] md:text-2xl">
                       {project.name}
                     </h3>

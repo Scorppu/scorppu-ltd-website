@@ -35,6 +35,9 @@ export type Project = {
   productURL?: string | null;
   /** True when productURL is a swap-ready placeholder, not a live link. */
   productURLIsPlaceholder?: boolean;
+  /** Optional mark shown inline with the project title. */
+  logo?: string | null;
+  logoAlt?: string;
 };
 
 export type Interest = {

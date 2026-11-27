@@ -136,15 +136,17 @@ export const portfolio: Portfolio = {
       name: "ServerForge",
       status: "upcoming public release",
       description:
-        "Project showcase for ServerForge. Product page is live at the dedicated ServerForge domain.",
+        "Creates and manages local Minecraft server instances — lifecycle, live console, Modrinth mods, players, and customization.",
       githubURL: null,
       productURL: "https://serverforge.scorppu.ltd",
       productURLIsPlaceholder: false,
+      logo: "/projects/serverforge-mark.png",
+      logoAlt: "ServerForge mark",
     },
     {
       name: "GPU Accelerated FX/FXCH",
       year: "2026",
-      status: "ongoing",
+      status: "done",
       description:
         "Optimized the FXCH module in ABC (UC Berkeley's sequential synthesis & verification system) by parallelizing subcube comparisons using CUDA, achieving significant performance gains on medium-to-large logic designs.",
       githubURL: null,

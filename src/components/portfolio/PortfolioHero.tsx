@@ -15,7 +15,7 @@ export default function PortfolioHero() {
     });
 
   return (
-    <section className="border-b border-[var(--line)]">
+    <section id="about" className="section-anchor border-b border-[var(--line)]">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-16 pt-28 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:items-end md:gap-12 md:px-8 md:pb-24 md:pt-36">
         <Reveal>
           <div>
