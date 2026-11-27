@@ -9,6 +9,26 @@
   --line: #ddd4c6;
   --elevated: #fffdf9;
   --ink-deep: #12100e;
+  --site-header-h: 4.25rem;
+  --section-nav-h: 3rem;
+  --section-jump-offset: calc(var(--site-header-h) + var(--section-nav-h) + 0.5rem);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --site-header-h: 4.75rem;
+    --section-nav-h: 3.25rem;
+  }
+}
+
+/** Hash / jump targets clear the fixed header + sticky section nav. */
+.section-anchor {
+  scroll-margin-top: var(--section-jump-offset);
+}
+
+#about.section-anchor {
+  /* About sits above the sticky subnav in document order. */
+  scroll-margin-top: calc(var(--site-header-h) + 0.5rem);
 }
 
 @theme inline {

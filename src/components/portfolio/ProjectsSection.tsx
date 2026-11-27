@@ -8,7 +8,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="field-beige scroll-mt-36 border-b border-[var(--line)] md:scroll-mt-40"
+      className="field-beige section-anchor border-b border-[var(--line)]"
     >
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <Reveal>

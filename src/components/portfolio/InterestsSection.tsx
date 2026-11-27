@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function InterestsSection() {
   return (
-    <section id="interests" className="field-beige scroll-mt-36 border-b border-[var(--line)] md:scroll-mt-40">
+    <section id="interests" className="field-beige section-anchor border-b border-[var(--line)]">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <Reveal>
           <SectionHeading eyebrow="Interests" title="Away from the keyboard" />
