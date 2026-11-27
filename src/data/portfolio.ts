@@ -140,11 +140,14 @@ export const portfolio: Portfolio = {
       githubURL: null,
       productURL: "https://serverforge.scorppu.ltd",
       productURLIsPlaceholder: false,
+      image: "/projects/serverforge.jpg",
+      imageAlt:
+        "ServerForge product page — local Minecraft server console with instance list",
     },
     {
       name: "GPU Accelerated FX/FXCH",
       year: "2026",
-      status: "ongoing",
+      status: "done",
       description:
         "Optimized the FXCH module in ABC (UC Berkeley's sequential synthesis & verification system) by parallelizing subcube comparisons using CUDA, achieving significant performance gains on medium-to-large logic designs.",
       githubURL: null,

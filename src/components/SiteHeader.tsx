@@ -41,7 +41,7 @@ export default function SiteHeader({ variant = "solid" }: SiteHeaderProps) {
       <nav className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between px-5 md:h-[4.75rem] md:px-8">
         <Link
           href="/"
-          className={`text-lg font-medium tracking-[0.03em] transition-opacity hover:opacity-70 md:text-xl ${
+          className={`text-lg font-medium tracking-[0.03em] transition-colors duration-300 hover:text-[var(--accent)] md:text-xl ${
             inverted ? "text-white" : "text-[var(--foreground)]"
           }`}
         >

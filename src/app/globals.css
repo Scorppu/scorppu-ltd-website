@@ -135,6 +135,15 @@ body {
   background-position: 0 0;
 }
 
+/** Warm beige section field — fuller than flat ivory paper. */
+.field-beige {
+  background-color: var(--accent-soft);
+  background-image: url("/textures/paper-dot-grid.svg");
+  background-repeat: repeat;
+  background-size: 20px 20px;
+  background-position: 0 0;
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -220,15 +229,18 @@ body {
 }
 
 .link-underline {
-  background-image: linear-gradient(currentColor, currentColor);
+  background-image: linear-gradient(var(--accent), var(--accent));
   background-position: 0 100%;
   background-repeat: no-repeat;
-  background-size: 0 1px;
-  transition: background-size 0.35s ease;
+  background-size: 0 1.5px;
+  transition:
+    background-size 0.35s ease,
+    color 0.35s ease;
 }
 
 .link-underline:hover {
-  background-size: 100% 1px;
+  background-size: 100% 1.5px;
+  color: var(--accent);
 }
 
 .welcome-overlay {

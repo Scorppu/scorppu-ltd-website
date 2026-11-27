@@ -16,7 +16,7 @@ export default function HomeAbout() {
     });
 
   return (
-    <section className="paper-grid-soft border-t border-[var(--line)]">
+    <section className="field-beige border-t border-[var(--line)]">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:gap-16 md:px-8 md:py-28">
         <Reveal>
           <PhotoFrame photo={aboutPhoto} objectPosition="center 22%" />
@@ -40,7 +40,7 @@ export default function HomeAbout() {
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
                 href="/scorppu"
-                className="inline-flex items-center border border-[var(--foreground)] px-6 py-3 text-base font-medium text-[var(--foreground)] transition-colors duration-300 hover:bg-[var(--foreground)] hover:text-[var(--background)] md:text-lg"
+                className="inline-flex items-center border border-[var(--foreground)] px-6 py-3 text-base font-medium text-[var(--foreground)] transition-colors duration-300 hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-[var(--elevated)] md:text-lg"
               >
                 Full profile
               </Link>
