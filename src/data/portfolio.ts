@@ -136,10 +136,11 @@ export const portfolio: Portfolio = {
       name: "ServerForge",
       status: "upcoming public release",
       description:
-        "Project showcase for ServerForge. Product page is live at the dedicated ServerForge domain.",
+        "Creates and manages local Minecraft server instances — lifecycle, live console, Modrinth mods, players, and customization.",
       githubURL: null,
       productURL: "https://serverforge.scorppu.ltd",
       productURLIsPlaceholder: false,
+      featured: true,
       image: "/projects/serverforge.jpg",
       imageAlt:
         "ServerForge product page — local Minecraft server console with instance list",

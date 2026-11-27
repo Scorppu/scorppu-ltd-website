@@ -5,6 +5,11 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "./SectionHeading";
 
 export default function ProjectsSection() {
+  const featured = portfolio.projects.find(
+    (project) => project.featured && project.image && project.productURL,
+  );
+  const listed = portfolio.projects.filter((project) => !project.featured);
+
   return (
     <section className="field-beige border-b border-[var(--line)]">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
@@ -16,104 +21,93 @@ export default function ProjectsSection() {
           />
         </Reveal>
 
-        <div className="flex flex-col gap-14 md:gap-20">
-          {portfolio.projects.map((project, index) => {
+        {featured && featured.image && featured.productURL ? (
+          <Reveal delay={1}>
+            <div className="mt-10 md:mt-12">
+              <p className="text-base tracking-[0.18em] text-[var(--accent)] uppercase md:text-lg">
+                Featured project
+              </p>
+              <a
+                href={featured.productURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${featured.name} — open product page`}
+                className="group relative mt-5 block aspect-[16/9] w-full overflow-hidden bg-[var(--ink-deep)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
+              >
+                <Image
+                  src={featured.image}
+                  alt={featured.imageAlt ?? `${featured.name} still`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 1152px"
+                  className="featured-project-still object-cover object-top transition-[transform,filter] duration-700 ease-out scale-[1.06] group-hover:scale-100 group-hover:blur-[2.5px] group-focus-visible:scale-100 group-focus-visible:blur-[2.5px]"
+                />
+                <div className="absolute inset-0 bg-[var(--ink-deep)]/35 transition-colors duration-700 group-hover:bg-[var(--ink-deep)]/55 group-focus-visible:bg-[var(--ink-deep)]/55" />
+
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center transition-transform duration-700 ease-out group-hover:-translate-y-2 group-focus-visible:-translate-y-2 md:px-12">
+                  <span className="text-3xl font-medium tracking-tight text-white sm:text-4xl md:text-5xl">
+                    {featured.name}
+                  </span>
+                  <p className="mt-0 max-h-0 max-w-xl overflow-hidden text-base leading-relaxed text-white/90 opacity-0 transition-all duration-500 ease-out group-hover:mt-4 group-hover:max-h-40 group-hover:opacity-100 group-focus-visible:mt-4 group-focus-visible:max-h-40 group-focus-visible:opacity-100 md:text-lg">
+                    {featured.description}
+                  </p>
+                </div>
+              </a>
+            </div>
+          </Reveal>
+        ) : null}
+
+        <div className="mt-14 flex flex-col gap-10 md:mt-16 md:gap-14">
+          {listed.map((project, index) => {
             const meta = [project.year, project.status].filter(Boolean).join(" · ");
-            const featured = Boolean(project.image);
 
             return (
               <Reveal key={project.name} delay={(Math.min(index, 2) + 1) as 1 | 2 | 3}>
-                <article
-                  className={
-                    featured
-                      ? "border-t border-[var(--line)] pt-12 first:border-t-0 first:pt-0"
-                      : "border-t border-[var(--line)] pt-10 first:border-t-0 first:pt-0"
-                  }
-                >
-                  {featured && project.image ? (
-                    <div className="relative mb-8 aspect-[16/9] w-full overflow-hidden bg-[var(--elevated)] md:mb-10">
-                      <Image
-                        src={project.image}
-                        alt={project.imageAlt ?? `${project.name} still`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 1152px"
-                        className="object-cover object-top transition-transform duration-700 ease-out hover:scale-[1.015]"
-                      />
-                    </div>
-                  ) : null}
-
-                  <div
-                    className={
-                      featured
-                        ? "grid gap-6 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:items-end md:gap-12"
-                        : undefined
-                    }
-                  >
-                    <div>
-                      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                        <h3
-                          className={
-                            featured
-                              ? "text-2xl font-medium text-[var(--foreground)] md:text-3xl"
-                              : "text-xl font-medium text-[var(--foreground)] md:text-2xl"
-                          }
-                        >
-                          {project.name}
-                        </h3>
-                        {meta ? (
-                          <span className="text-base text-[var(--accent)] md:text-lg">
-                            {meta}
-                          </span>
-                        ) : null}
-                      </div>
-                      <p
-                        className={
-                          featured
-                            ? "mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg"
-                            : "mt-4 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg"
-                        }
-                      >
-                        {project.description}
-                      </p>
-                    </div>
-
-                    <div
-                      className={`flex flex-wrap gap-x-6 gap-y-2 text-base md:text-lg ${
-                        featured ? "mt-5 md:mt-0 md:justify-end" : "mt-5"
-                      }`}
-                    >
-                      {project.productURL ? (
-                        project.productURLIsPlaceholder ? (
-                          <BrandMark
-                            site="product"
-                            className="text-[var(--muted)]"
-                          >
-                            Product page ·{" "}
-                            <code className="text-[var(--accent)]">
-                              {project.productURL}
-                            </code>{" "}
-                            <span className="text-[var(--accent)]">(swap when public)</span>
-                          </BrandMark>
-                        ) : (
-                          <BrandLink
-                            href={project.productURL}
-                            site="product"
-                            className="text-[var(--muted)]"
-                          >
-                            Visit product
-                          </BrandLink>
-                        )
-                      ) : null}
-                      {project.githubURL ? (
-                        <BrandLink
-                          href={project.githubURL}
-                          site="github"
+                <article className="border-t border-[var(--line)] pt-10">
+                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 className="text-xl font-medium text-[var(--foreground)] md:text-2xl">
+                      {project.name}
+                    </h3>
+                    {meta ? (
+                      <span className="text-base text-[var(--accent)] md:text-lg">
+                        {meta}
+                      </span>
+                    ) : null}
+                  </div>
+                  <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                    {project.description}
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-base md:text-lg">
+                    {project.productURL ? (
+                      project.productURLIsPlaceholder ? (
+                        <BrandMark
+                          site="product"
                           className="text-[var(--muted)]"
                         >
-                          View on GitHub
+                          Product page ·{" "}
+                          <code className="text-[var(--accent)]">
+                            {project.productURL}
+                          </code>{" "}
+                          <span className="text-[var(--accent)]">(swap when public)</span>
+                        </BrandMark>
+                      ) : (
+                        <BrandLink
+                          href={project.productURL}
+                          site="product"
+                          className="text-[var(--muted)]"
+                        >
+                          Visit product
                         </BrandLink>
-                      ) : null}
-                    </div>
+                      )
+                    ) : null}
+                    {project.githubURL ? (
+                      <BrandLink
+                        href={project.githubURL}
+                        site="github"
+                        className="text-[var(--muted)]"
+                      >
+                        View on GitHub
+                      </BrandLink>
+                    ) : null}
                   </div>
                 </article>
               </Reveal>

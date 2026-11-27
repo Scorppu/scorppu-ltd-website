@@ -279,4 +279,9 @@ body {
     transform: none;
     transition: none;
   }
+
+  .featured-project-still {
+    transform: none !important;
+    filter: none !important;
+  }
 }

@@ -35,7 +35,9 @@ export type Project = {
   productURL?: string | null;
   /** True when productURL is a swap-ready placeholder, not a live link. */
   productURLIsPlaceholder?: boolean;
-  /** Optional still for a richer featured project treatment. */
+  /** When true, shown in the Featured Project hover CTA (not the list below). */
+  featured?: boolean;
+  /** Still used as the Featured Project button background. */
   image?: string | null;
   imageAlt?: string;
 };
