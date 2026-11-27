@@ -42,10 +42,12 @@ export default function SectionNav() {
 
     const jumpOffset = (id: string) => {
       const header = siteHeaderHeight();
+      // Extra slack so the prior section doesn’t peek above the sticky bars.
+      const slack = 28;
       // About sits above this sticky nav in document order.
-      if (id === "about") return header + 8;
+      if (id === "about") return header + slack;
       const nav = navRef.current?.offsetHeight ?? 48;
-      return header + nav + 8;
+      return header + nav + slack;
     };
 
     const scrollToSection = (id: string) => {
@@ -117,7 +119,7 @@ export default function SectionNav() {
       aria-label="On this page"
       className="sticky top-[var(--site-header-h)] z-20 h-[var(--section-nav-h)] border-b border-[var(--line)]/80 bg-[var(--background)]/90 backdrop-blur-md"
     >
-      <div className="mx-auto flex h-full max-w-6xl items-center gap-1 overflow-x-auto px-5 [-ms-overflow-style:none] [scrollbar-width:none] md:gap-2 md:px-8 [&::-webkit-scrollbar]:hidden">
+      <div className="mx-auto flex h-full max-w-6xl items-center justify-center gap-1 overflow-x-auto px-5 [-ms-overflow-style:none] [scrollbar-width:none] md:gap-2 md:px-8 [&::-webkit-scrollbar]:hidden">
         {links.map((link) => {
           const active = activeId === link.id;
           return (
