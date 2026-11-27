@@ -1,6 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-  <!-- Original editorial paper tile: sparse dots at intersections with faint grid lines.
-       Opacity tuned so the dotted grid is clearly visible on warm paper panels. -->
-  <path d="M0 0.4H28M0.4 0V28" stroke="#1a1814" stroke-opacity="0.11" stroke-width="0.75"/>
-  <circle cx="0" cy="0" r="1.15" fill="#1a1814" fill-opacity="0.22"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <!-- Dot-only paper texture — no grid lines. Soft enough that body text stays readable. -->
+  <circle cx="1" cy="1" r="1.25" fill="#1a1814" fill-opacity="0.14"/>
 </svg>

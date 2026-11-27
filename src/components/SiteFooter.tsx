@@ -10,7 +10,7 @@ import SignatureMark from "@/components/SignatureMark";
  */
 export default function SiteFooter() {
   return (
-    <footer className="paper-grid border-t border-[var(--line)]">
+    <footer className="border-t border-[var(--line)] bg-[var(--elevated)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-5 py-12 md:flex-row md:items-stretch md:gap-0 md:px-8 md:py-14">
         <div className="flex flex-col items-start md:pr-10">
           <SignatureMark size="footer" />
